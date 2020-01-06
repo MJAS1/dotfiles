@@ -1,0 +1,138 @@
+set nocompatible
+filetype plugin indent on
+
+let mapleader=","
+
+
+"----------------------------
+" Setup Vundle plugin manager
+"----------------------------
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here'))
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Custom plugins
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'majutsushi/tagbar'
+
+Plugin 'bling/vim-airline'
+
+Plugin 'Lokaltog/vim-easymotion'
+
+Plugin 'indentpython.vim'
+
+Plugin 'gerw/vim-latex-suite'
+
+"All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+" NerdTree
+map <C-n> : NERDTreeToggle<CR> :set relativenumber<CR>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Vim-Latex
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" " The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
+
+" Autoclose braces
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+" Autoclose parantheses
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O
+inoremap ((     (
+inoremap ()     ()
+
+" Autoclose brackets
+inoremap [      []<Left>
+inoremap [<CR>  [<CR>]<Esc>O
+inoremap [[     [
+inoremap []     []
+
+" Buffers
+nnoremap <A-l> :bn<CR>
+nnoremap <A-h> :bp<CR>
+
+" Windows
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+nmap <F10> :cprev <CR>
+nmap <F12> :cnext <CR>
+
+nnoremap <Tab> :bn <CR>
+nnoremap <S-Tab> :bp <CR>
+
+imap jj <Esc>
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set relativenumber
+
+nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
+nnoremap <leader>q :qa<CR> :set number!<CR>
+
+" Use ctrl-s to save
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+
+set t_Co=256
+
+" Highlight current line
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au WinLeave * setlocal nocursorline
+augroup END
+
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+" Highlight trailing spaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+
+" Toggle pasting
+set pastetoggle=<F2>
+
+syntax on

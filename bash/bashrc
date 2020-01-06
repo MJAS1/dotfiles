@@ -1,0 +1,18 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+elif [ -f /etc/bash.bashrc ]; then
+    . /etc/bash.bashrc
+fi
+
+# Aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+# Pass ctrl-s through applications
+stty -ixon
+
+export HISTSIZE=5000

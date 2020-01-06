@@ -1,0 +1,31 @@
+# ls
+alias l="ls"
+alias ll="ls -lh"
+alias la="ls -lA"
+
+# Git
+alias ga="git add"
+alias gau="git add -u"
+alias gap="git add -p"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gca="git commit --amend"
+alias gs="git status"
+alias gg="git graph"
+alias gd="git diff"
+alias gfp="git fetch -p"
+alias gpo="git push origin"
+alias gpof="git push origin --force-with-lease"
+alias gpuo="git push -u origin"
+
+# NPM
+alias ns="npm start"
+alias nt="npm test"
+alias nr="npm run"
+
+# Create a temporary directory and cd to it
+tmpcd()
+{
+    local dir=$(mktemp -d)
+    cd $dir
+}
