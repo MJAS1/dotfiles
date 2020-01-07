@@ -19,7 +19,7 @@ install_dotfile()
 {
     local dotfile=.$(basename $1)
 
-    if [ -f ~/$dotfile ] || [ -d ~/$dotfile ]; then
+    if [ -e ~/$dotfile ]; then
         echo "$dotfile already exists in home folder. Creating a backup to $dotfile.bk"
         mv ~/$dotfile ~/$dotfile.bk
     fi
