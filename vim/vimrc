@@ -119,6 +119,7 @@ nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 
 set t_Co=256
+set history=200
 
 " Highlight current line
 augroup CursorLine
