@@ -113,6 +113,7 @@ set relativenumber
 
 nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
 nnoremap <leader>q :qa<CR> :set number!<CR>
+nnoremap <silent> <leader><space> :noh <CR>
 
 " Use ctrl-s to save
 nmap <c-s> :w<CR>
