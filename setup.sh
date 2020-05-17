@@ -27,11 +27,18 @@ install_dotfile()
     ln -s $DIR/$1 ~/$dotfile
 }
 
+install_vim_plugins()
+{
+    vim +PlugInstall +qa
+}
+
 main()
 {
     for dotfile in ${DOTFILES[@]}; do
         install_dotfile $dotfile
     done
+
+    install_vim_plugins
 }
 
 main
