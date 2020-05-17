@@ -1,7 +1,4 @@
 [alias]
 	graph = log --all --graph --oneline --decorate
-[user]
-	email = manu.sutela@gmail.com
-	name = Manu Sutela
 [core]
 	editor = vim
