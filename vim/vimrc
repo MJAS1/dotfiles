@@ -14,7 +14,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'bling/vim-airline'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'indentpython.vim'
 Plug 'gerw/vim-latex-suite'
 Plug 'tpope/vim-commentary'
 
