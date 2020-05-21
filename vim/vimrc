@@ -67,8 +67,8 @@ inoremap [[     [
 inoremap []     []
 
 " Buffers
-nnoremap <A-l> :bn<CR>
-nnoremap <A-h> :bp<CR>
+nnoremap <Tab> :bn <CR>
+nnoremap <S-Tab> :bp <CR>
 
 " Windows
 nmap <silent> <C-k> :wincmd k<CR>
@@ -78,9 +78,6 @@ nmap <silent> <C-l> :wincmd l<CR>
 
 nmap <F10> :cprev <CR>
 nmap <F12> :cnext <CR>
-
-nnoremap <Tab> :bn <CR>
-nnoremap <S-Tab> :bp <CR>
 
 imap jj <Esc>
 
