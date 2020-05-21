@@ -18,7 +18,6 @@ Plug 'tpope/vim-surround'
 
 call plug#end()
 
-
 "------------------------------
 " Configure plugins
 "------------------------------
@@ -42,7 +41,6 @@ set grepprg=grep\ -nH\ $*
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-
 
 "------------------------------
 " Custom configurations
@@ -100,9 +98,9 @@ set history=200
 
 " Highlight current line
 augroup CursorLine
-	au!
-	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-	au WinLeave * setlocal nocursorline
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
 augroup END
 
 :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
