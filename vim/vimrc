@@ -1,5 +1,6 @@
 set nocompatible
 filetype plugin indent on
+let mapleader=","
 
 "------------------------------
 " Setup vim-plug plugin manager
@@ -118,4 +119,3 @@ augroup END
 set pastetoggle=<F2>
 
 syntax on
-let mapleader=","
