@@ -86,15 +86,15 @@ nnoremap <Tab> :bn <CR>
 nnoremap <S-Tab> :bp <CR>
 
 " Windows
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
+noremap <silent> <C-k> :wincmd k<CR>
+noremap <silent> <C-j> :wincmd j<CR>
+noremap <silent> <C-h> :wincmd h<CR>
+noremap <silent> <C-l> :wincmd l<CR>
 
-nmap <F10> :cprev <CR>
-nmap <F12> :cnext <CR>
+noremap <F10> :cprev <CR>
+noremap <F12> :cnext <CR>
 
-imap jj <Esc>
+inoremap jj <Esc>
 
 nnoremap <silent> <leader>l :call <SID>StripTrailingWhitespaces()<CR>
 
