@@ -1,6 +1,7 @@
 set nocompatible
 filetype plugin indent on
 let mapleader=","
+syntax on
 
 "------------------------------
 " Setup vim-plug plugin manager
@@ -43,7 +44,7 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 "------------------------------
-" Custom functions
+" Functions
 "------------------------------
 
 " From: http://vimcasts.org/episodes/tidying-whitespace/
@@ -60,7 +61,7 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 "------------------------------
-" Custom configurations
+" Mappings
 "------------------------------
 
 " Autoclose braces
@@ -91,26 +92,29 @@ noremap <silent> <C-j> :wincmd j<CR>
 noremap <silent> <C-h> :wincmd h<CR>
 noremap <silent> <C-l> :wincmd l<CR>
 
+" Use ctrl-s to save
+noremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>a
+
 noremap <F10> :cprev <CR>
 noremap <F12> :cnext <CR>
 
 inoremap jj <Esc>
 
 nnoremap <silent> <leader>l :call <SID>StripTrailingWhitespaces()<CR>
+nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
+nnoremap <leader>q :qa<CR> :set number!<CR>
+nnoremap <silent> <leader><space> :noh <CR>
+
+"------------------------------
+" Options
+"------------------------------
 
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 set relativenumber
-
-nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
-nnoremap <leader>q :qa<CR> :set number!<CR>
-nnoremap <silent> <leader><space> :noh <CR>
-
-" Use ctrl-s to save
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
 
 set t_Co=256
 set history=200
@@ -132,4 +136,3 @@ augroup END
 " Toggle pasting
 set pastetoggle=<F2>
 
-syntax on
