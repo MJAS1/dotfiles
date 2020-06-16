@@ -25,6 +25,7 @@ call plug#end()
 
 " NerdTree
 map <C-n> : NERDTreeToggle<CR> :set relativenumber<CR>
+let g:NERDTreeChDirMode = 2
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
