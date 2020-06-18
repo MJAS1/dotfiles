@@ -17,4 +17,7 @@ fi
 # Pass ctrl-s through applications
 stty -ixon
 
-export HISTSIZE=5000
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=5000
+HISTFILESIZE=10000
