@@ -1,7 +1,11 @@
 # ls
+alias ls="ls --color=auto"
 alias l="ls"
-alias ll="ls -lh"
+alias ll="ls -lhF"
 alias la="ls -lA"
+
+# grep
+alias grep="grep --color=auto"
 
 # Git
 alias ga="git add"
