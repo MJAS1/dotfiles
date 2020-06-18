@@ -21,3 +21,5 @@ HISTSIZE=5000
 HISTFILESIZE=10000
 
 PS1="[\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[37m\]:\[\e[m\]\[\e[31m\]\w\[\e[m\]] \[\e[37m\]>\[\e[m\] "
+
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
