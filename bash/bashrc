@@ -7,8 +7,6 @@ elif [ -f /etc/bash.bashrc ]; then
     . /etc/bash.bashrc
 fi
 
-export PS1="[\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[37m\]:\[\e[m\]\[\e[31m\]\w\[\e[m\]] \[\e[37m\]>\[\e[m\] "
-
 # Aliases
 if [ -f ~/.aliases ]; then
     . ~/.aliases
@@ -21,3 +19,5 @@ shopt -s histappend
 HISTCONTROL=ignoreboth
 HISTSIZE=5000
 HISTFILESIZE=10000
+
+PS1="[\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[37m\]:\[\e[m\]\[\e[31m\]\w\[\e[m\]] \[\e[37m\]>\[\e[m\] "
