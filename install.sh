@@ -22,10 +22,10 @@ install_dotfile()
 
     if [ -e ~/"$dotfile" ]; then
         echo "$dotfile already exists in home folder. Creating a backup to $dotfile.bk"
-        mv ~/"$dotfile" ~/$"dotfile.bk"
+        mv ~/"$dotfile" ~/"$dotfile.bk"
     fi
 
-    ln -s "$DIR/$1" ~/"$dotfile"
+    ln -s $DIR/"$1" ~/"$dotfile"
 }
 
 install_vim_plugins()
