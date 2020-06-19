@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Test Backups
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Create dummy files
+      run: |
+        touch ~/.bashrc ~/.gitconfig ~/.gitcongig_global ~/.aliases ~/.tmux.conf,
+        mkdir ~/.vim
+        
+    - name: Install dotfiles
+      run: ./install.sh
+    
+    - name: Test that backups are created
+      run: |
+        test -f ~/.bashrc.bk
+        test -f ~/.gitconfig.bk
+        test -f ~/.gitconfig.bk
+        test -f ~/.aliases.bk
+        test -f ~/.tmux.conf
+        test -d ~/.vim.bk
