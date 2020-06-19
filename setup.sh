@@ -17,14 +17,15 @@ readonly DOTFILES=(
 
 install_dotfile()
 {
-    local dotfile=.$(basename $1)
+    local dotfile
+    dotfile=.$(basename "$1")
 
-    if [ -e ~/$dotfile ]; then
+    if [ -e ~/"$dotfile" ]; then
         echo "$dotfile already exists in home folder. Creating a backup to $dotfile.bk"
-        mv ~/$dotfile ~/$dotfile.bk
+        mv ~/"$dotfile" ~/$"dotfile.bk"
     fi
 
-    ln -s $DIR/$1 ~/$dotfile
+    ln -s "$DIR/$1" ~/"$dotfile"
 }
 
 install_vim_plugins()
@@ -34,8 +35,8 @@ install_vim_plugins()
 
 main()
 {
-    for dotfile in ${DOTFILES[@]}; do
-        install_dotfile $dotfile
+    for dotfile in "${DOTFILES[@]}"; do
+        install_dotfile "$dotfile"
     done
 
     install_vim_plugins
