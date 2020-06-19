@@ -1,3 +1,4 @@
-![Install CI](https://github.com/MJAS1/dotfiles/workflows/Install%20CI/badge.svg)
-# dotfiles 
+![Install](https://github.com/MJAS1/dotfiles/workflows/Install/badge.svg)
+![Test](https://github.com/MJAS1/dotfiles/workflows/Test/badge.svg)
+# dotfiles
 Linux application configurations
