@@ -85,10 +85,6 @@ inoremap [<CR>  [<CR>]<Esc>O
 inoremap [[     [
 inoremap []     []
 
-" Autoclose quotes
-inoremap "      ""<Left>
-inoremap '      ''<Left>
-
 " Buffers
 nnoremap <Tab> :bn <CR>
 nnoremap <S-Tab> :bp <CR>
