@@ -11,6 +11,7 @@ readonly DOTFILES=(
     git/gitconfig
     git/gitignore_global
     shell/aliases
+    shell/env
     tmux/tmux.conf
     vim
 )
