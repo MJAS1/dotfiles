@@ -25,7 +25,7 @@ install_dotfile()
         mv ~/"$dotfile" ~/"$dotfile.bk"
     fi
 
-    ln -s $DIR/"$1" ~/"$dotfile"
+    ln -s "$DIR"/"$1" ~/"$dotfile"
 }
 
 install_vim_plugins()
