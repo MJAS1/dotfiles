@@ -13,6 +13,8 @@ readonly DOTFILES=(
     shell/aliases
     shell/env
     tmux/tmux.conf
+    zsh/zshrc
+    zsh/p10k.zsh
     vim
 )
 
