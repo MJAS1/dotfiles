@@ -7,14 +7,14 @@ set -o pipefail
 readonly DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 readonly DOTFILES=(
-    bash/bashrc
-    git/gitconfig
-    git/gitignore_global
+    shell/bashrc
+    shell/zshrc
     shell/aliases
     shell/env
+    git/gitconfig
+    git/gitignore_global
     tmux/tmux.conf
-    zsh/zshrc
-    zsh/p10k.zsh
+    zsh
     vim
 )
 
