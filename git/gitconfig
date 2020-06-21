@@ -1,4 +1,5 @@
 [alias]
-	graph = log --all --graph --oneline --decorate
+    graph = log --all --graph --oneline --decorate
 [core]
-	editor = vim
+    editor = vim
+    excludesfile = ~/.gitignore_global
