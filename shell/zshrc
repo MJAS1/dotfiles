@@ -34,3 +34,8 @@ if [ -f ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme ]; then
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
     [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
 fi
+
+# Local settings
+if [ -f ~/.zshrc_local ]; then
+    . ~/.zshrc_local
+fi
