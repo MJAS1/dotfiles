@@ -133,6 +133,8 @@ set history=200
 set mouse=a
 set ttymouse=xterm2
 
+color desert
+
 " Highlight current line
 augroup CursorLine
     au!
