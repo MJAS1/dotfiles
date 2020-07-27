@@ -90,8 +90,6 @@ nnoremap <S-Tab> :bp <CR>
 
 " Windows
 noremap <silent> <C-k> :wincmd k<CR>
-noremap <silent> <C-j> :wincmd j<CR>
-noremap <silent> <C-h> :wincmd h<CR>
 noremap <silent> <C-l> :wincmd l<CR>
 
 " Use ctrl-s to save
@@ -99,12 +97,12 @@ noremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
 
 " Move lines
-nnoremap <S-k> :m .-2<CR>==
-nnoremap <S-j> :m .+1<CR>==
-inoremap <S-j> <Esc>:m .+1<CR>==gi
-inoremap <S-k> <Esc>:m .-2<CR>==gi
-vnoremap <S-j> :m '>+1<CR>gv=gv
-vnoremap <S-k> :m '<-2<CR>gv=gv
+nnoremap <C-k> :m .-2<CR>==
+nnoremap <C-j> :m .+1<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 noremap <F10> :cprev <CR>
 noremap <F12> :cnext <CR>
