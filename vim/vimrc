@@ -89,7 +89,7 @@ nnoremap <Tab> :bn <CR>
 nnoremap <S-Tab> :bp <CR>
 
 " Windows
-noremap <silent> <C-k> :wincmd k<CR>
+noremap <silent> <C-h> :wincmd h<CR>
 noremap <silent> <C-l> :wincmd l<CR>
 
 " Use ctrl-s to save
