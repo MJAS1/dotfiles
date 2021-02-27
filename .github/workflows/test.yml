@@ -17,7 +17,7 @@ jobs:
       run: |
         touch ~/.bashrc ~/.gitconfig ~/.gitcongig_global ~/.aliases
         touch ~/.tmux.conf ~/.env ~/.zshrc
-        mkdir ~/.vim ~/.zsh
+        mkdir ~/.vim ~/.zsh ~/.i3
 
     - name: Install dotfiles
       run: ./install.sh
@@ -33,3 +33,4 @@ jobs:
         test -f ~/.zshrc.bk
         test -d ~/.vim.bk
         test -d ~/.zsh.bk
+        test -d ~/.i3.bk
