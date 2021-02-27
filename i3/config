@@ -184,6 +184,7 @@ gaps outer 5
 
 # Application shortcuts
 bindsym $mod+Ctrl+f exec --no-startup-id firefox
+bindsym $mod+Ctrl+k exec --no-startup-id keepassxc
 
 # System lock
 bindsym $mod+Ctrl+l exec $Locker, mode "default"
