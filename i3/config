@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # Set Finnish keyboard layout
-exec "setxkbmap -layout fi"
+exec  --no-startup-id "setxkbmap -layout fi"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -190,8 +190,8 @@ bindsym $mod+Ctrl+k exec --no-startup-id keepassxc
 bindsym $mod+Ctrl+l exec $Locker, mode "default"
 
 # Monitor brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
