@@ -18,6 +18,7 @@ Plug 'bling/vim-airline'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -34,6 +35,12 @@ nmap <F8> :TagbarToggle<CR>
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+
+" gruvbox
+set background=dark
+set termguicolors
+let g:gruvbox_transparent_bg = 1
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " Vim-Latex
 " IMPORTANT: grep will sometimes skip displaying the file name if you
@@ -137,8 +144,6 @@ set hidden
 " Enable mouse usage
 set mouse=a
 set ttymouse=xterm2
-
-color desert
 
 " Highlight current line
 augroup CursorLine
