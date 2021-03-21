@@ -137,6 +137,10 @@ set relativenumber
 set history=200
 set listchars=tab:▸\ ,eol:¬
 
+" Fix background on some terminals
+" See: https://sunaku.github.io/vim-256color-bce.html
+set t_ut=
+
 " Enable switching buffers with files having unsaved changes
 set hidden
 
