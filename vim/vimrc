@@ -70,6 +70,19 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
+" From: https://www.reddit.com/r/vim/comments/74pw75/how_to_toggle_transparent_background_in_vim/
+let t:is_transparent = 0
+function! ToggleTransparentBackground()
+    if t:is_transparent == 0
+        hi Normal guibg=NONE ctermbg=NONE
+        let t:is_transparent = 1
+    else
+        " hi Normal guibg=#282828 ctermbg=black
+        set background=dark
+        let t:is_transparent = 0
+    endif
+endfunctio
+
 "------------------------------
 " Mappings
 "------------------------------
@@ -123,6 +136,7 @@ nnoremap <silent> <leader>l :call <SID>StripTrailingWhitespaces()<CR>
 nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
 nnoremap <leader>q :qa<CR> :set number!<CR>
 nnoremap <silent> <leader><space> :noh <CR>
+nnoremap <C-x><C-t> :call ToggleTransparentBackground()<CR>
 
 "------------------------------
 " Options
