@@ -77,7 +77,6 @@ function! ToggleTransparentBackground()
         hi Normal guibg=NONE ctermbg=NONE
         let t:is_transparent = 1
     else
-        " hi Normal guibg=#282828 ctermbg=black
         set background=dark
         let t:is_transparent = 0
     endif
