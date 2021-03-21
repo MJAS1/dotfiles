@@ -134,7 +134,6 @@ set shiftwidth=4
 set expandtab
 
 set relativenumber
-set t_Co=256
 set history=200
 set listchars=tab:▸\ ,eol:¬
 
