@@ -26,6 +26,11 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# Local settings
+if [ -f ~/.zshrc_local ]; then
+    . ~/.zshrc_local
+fi
+
 HISTFILE=~/.zsh_histfile
 HISTSIZE=5000
 SAVEHIST=10000
@@ -39,8 +44,3 @@ zstyle :compinstall filename '/home/manu/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-# Local settings
-if [ -f ~/.zshrc_local ]; then
-    . ~/.zshrc_local
-fi
