@@ -33,6 +33,7 @@ let g:NERDTreeChDirMode = 2
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_show_linenumbers = -1
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
