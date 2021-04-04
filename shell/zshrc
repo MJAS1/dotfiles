@@ -9,6 +9,7 @@ fi
 if [ -f ~/.zsh/antigen.zsh ]; then
     source ~/.zsh/antigen.zsh
 
+    antigen bundle zsh-users/zsh-autosuggestions
     antigen theme romkatv/powerlevel10k
     antigen apply
 
