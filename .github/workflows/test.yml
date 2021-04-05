@@ -37,5 +37,5 @@ jobs:
 
     - name: Test that default packages were installed
       run: |
-          command -v zsh
-          command -v powerline
+        command -v zsh
+        command -v powerline
