@@ -6,7 +6,7 @@ Linux application configurations
 ## Installation
 
 ```bash
-git clone --recursive https://github.com/MJAS1/dotfiles
+git clone https://github.com/MJAS1/dotfiles
 cd dotfiles
 ./install.sh
 ```
