@@ -39,3 +39,7 @@ jobs:
       run: |
         command -v zsh
         command -v powerline
+
+    - name: Run shellcheck
+      run: |
+        shellcheck install.sh
