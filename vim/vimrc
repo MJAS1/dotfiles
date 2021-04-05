@@ -20,6 +20,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 call plug#end()
 
