@@ -6,9 +6,9 @@ filetype plugin indent on
 let mapleader=","
 syntax on
 
-"------------------------------
+"------------------------------------------------------------------------------
 " Setup vim-plug plugin manager
-"------------------------------
+"------------------------------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
 
@@ -24,9 +24,9 @@ Plug 'vim-ctrlspace/vim-ctrlspace'
 
 call plug#end()
 
-"------------------------------
+"------------------------------------------------------------------------------
 " Configure plugins
-"------------------------------
+"------------------------------------------------------------------------------
 
 " NerdTree
 map <C-n> : NERDTreeToggle<CR> :set relativenumber<CR>
@@ -57,9 +57,9 @@ set grepprg=grep\ -nH\ $*
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-"------------------------------
+"------------------------------------------------------------------------------
 " Functions
-"------------------------------
+"------------------------------------------------------------------------------
 
 " From: http://vimcasts.org/episodes/tidying-whitespace/
 function! <SID>StripTrailingWhitespaces()
@@ -86,9 +86,9 @@ function! ToggleTransparentBackground()
     endif
 endfunction
 
-"------------------------------
+"------------------------------------------------------------------------------
 " Mappings
-"------------------------------
+"------------------------------------------------------------------------------
 
 " Autoclose braces
 inoremap {      {}<Left>
@@ -141,9 +141,9 @@ nnoremap <leader>q :qa<CR> :set number!<CR>
 nnoremap <silent> <leader><space> :noh <CR>
 nnoremap <C-x><C-t> :call ToggleTransparentBackground()<CR>
 
-"------------------------------
+"------------------------------------------------------------------------------
 " Options
-"------------------------------
+"------------------------------------------------------------------------------
 
 set tabstop=4
 set softtabstop=4
