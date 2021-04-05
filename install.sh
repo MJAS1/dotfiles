@@ -37,8 +37,29 @@ install_vim_plugins()
     vim +PlugInstall +qa
 }
 
+install_default_packages()
+{
+    if command -v apt-get 2>&1 >/dev/null; then
+        sudo apt-get install zsh powerline
+    elif command -v dnf 2>&1 >/dev/null; then
+        sudo dnf install zsh tmux-powerline
+    elif command -v pacman 2>&1 >/dev/null; then
+        sudo pacman -S zsh powerline
+    else
+        echo "Could not determine Linux distribution. Packages not installed" >&2
+    fi
+}
+
 main()
 {
+    while true; do
+        read -p "Install default packages (y/n)? " -r
+        case $REPLY in
+            y|Y ) install_default_packages; break;;
+            n|N ) break;;
+        esac
+    done
+
     for dotfile in "${DOTFILES[@]}"; do
         install_dotfile "$dotfile"
     done

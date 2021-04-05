@@ -19,8 +19,8 @@ jobs:
         touch ~/.tmux.conf ~/.env ~/.zshrc
         mkdir ~/.vim ~/.zsh ~/.i3
 
-    - name: Install dotfiles
-      run: ./install.sh
+    - name: Install dotfiles and default packages
+      run: echo -e "y\nY" | ./install.sh
 
     - name: Test that backups are created
       run: |
@@ -34,3 +34,8 @@ jobs:
         test -d ~/.vim.bk
         test -d ~/.zsh.bk
         test -d ~/.i3.bk
+
+    - name: Test that default packages were installed
+      run: |
+          command -v zsh
+          command -v powerline
