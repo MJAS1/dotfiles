@@ -44,7 +44,6 @@ let g:airline_powerline_fonts = 1
 set background=dark
 set termguicolors
 let g:gruvbox_transparent_bg = 1
-autocmd vimenter * ++nested colorscheme gruvbox
 
 " Vim-Latex
 " IMPORTANT: grep will sometimes skip displaying the file name if you
@@ -179,3 +178,5 @@ augroup END
 " Toggle pasting
 set pastetoggle=<F2>
 
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd vimenter * ++nested colorscheme gruvbox
