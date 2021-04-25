@@ -5,6 +5,12 @@ stty -ixon
 if [ -f ~/.zsh/antigen.zsh ]; then
     source ~/.zsh/antigen.zsh
 
+    if command -v tmux &>/dev/null; then
+        ZSH_TMUX_AUTOSTART=true
+        ZSH_TMUX_AUTOCONNECT=false
+        antigen bundle tmux
+    fi
+
     antigen bundle zsh-users/zsh-autosuggestions
     antigen theme romkatv/powerlevel10k
     antigen apply
