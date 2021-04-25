@@ -179,4 +179,4 @@ augroup END
 set pastetoggle=<F2>
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd vimenter * ++nested colorscheme gruvbox
+autocmd vimenter * nested colorscheme gruvbox
