@@ -22,6 +22,11 @@ alias gpo="git push origin"
 alias gpof="git push origin --force-with-lease"
 alias gpuo="git push -u origin"
 
+# Taskwarrior
+alias tw="task +work"
+alias twg="task +work +gitlab"
+alias twb="task +work burndown.daily"
+
 # NPM
 alias ns="npm start"
 alias nt="npm test"
