@@ -44,7 +44,6 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_show_linenumbers = -1
-autocmd VimEnter * TagbarOpen
 " If another buffer tries to replace Tagbar, put it in the other window, and bring back Tagbar.
 autocmd BufEnter * if bufname('#') =~ 'Tagbar' && bufname('%') !~ 'Tagbar' && winnr('$') > 1 |
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
@@ -193,3 +192,4 @@ set pastetoggle=<F2>
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd vimenter * nested colorscheme gruvbox
+autocmd VimEnter * TagbarOpen
