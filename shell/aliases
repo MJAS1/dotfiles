@@ -23,6 +23,7 @@ alias gpof="git push origin --force-with-lease"
 alias gpuo="git push -u origin"
 
 # Taskwarrior
+alias t="task"
 alias tw="task +work"
 alias twg="task +work +gitlab"
 alias twb="task +work burndown.daily"
