@@ -27,6 +27,7 @@ alias t="task"
 alias tw="task +work"
 alias twg="task +work +gitlab"
 alias twb="task +work burndown.daily"
+alias tp="task project:personal"
 
 # NPM
 alias ns="npm start"
