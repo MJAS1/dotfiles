@@ -14,7 +14,6 @@ readonly DOTFILES=(
     git/gitconfig
     git/gitignore_global
     tmux/tmux.conf
-    ledger/ledgerrc
     i3
     zsh
     vim
