@@ -30,8 +30,7 @@ alias twb="task +work burndown.daily"
 alias tp="task project:personal"
 
 # Ledger-CLI
-alias ledb="ledger --price-db $LEDGER_PRICEDB balance Assets Liabilities"
-alias led="ledger --price-db $LEDGER_PRICEDB balance Assets --exchange €"
+alias led="ledger balance Assets --exchange €"
 alias ledl="led Liabilities"
 alias lede="ledger balance Expenses"
 alias ledei="lede Income --invert"
