@@ -2,6 +2,7 @@ set encoding=utf-8
 scriptencoding utf-8
 
 set nocompatible
+set fileformats=unix,dos
 filetype plugin indent on
 let mapleader=","
 syntax on
