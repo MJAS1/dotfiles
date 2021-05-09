@@ -163,6 +163,8 @@ set shiftwidth=4
 set expandtab
 
 set relativenumber
+set wildmenu
+set showcmd
 set history=200
 set listchars=tab:▸\ ,eol:¬
 
