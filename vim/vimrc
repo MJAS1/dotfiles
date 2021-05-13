@@ -149,6 +149,7 @@ noremap <C-f> :Rg<CR>
 noremap <C-p> :Files<CR>
 noremap <leader>l :Lines<CR>
 noremap <leader>b :BLines<CR>
+noremap <leader>c :Commits<CR>
 
 noremap <F10> :cprev <CR>
 noremap <F12> :cnext <CR>
