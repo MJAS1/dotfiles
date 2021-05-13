@@ -5,6 +5,7 @@ stty -ixon
 if [ -f ~/.zsh/antigen.zsh ]; then
     source ~/.zsh/antigen.zsh
 
+    # Only autostart tmux if not running in ssh
     if [ -z "$SSH_CLIENT" ] && command -v tmux &>/dev/null; then
         ZSH_TMUX_AUTOSTART=true
         ZSH_TMUX_AUTOCONNECT=false
