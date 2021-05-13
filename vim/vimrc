@@ -144,12 +144,18 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+" fzf
+noremap <C-f> :Rg<CR>
+noremap <C-p> :Files<CR>
+noremap <leader>l :Lines<CR>
+noremap <leader>b :BLines<CR>
+
 noremap <F10> :cprev <CR>
 noremap <F12> :cnext <CR>
 
 inoremap jj <Esc>
 
-nnoremap <silent> <leader>l :call <SID>StripTrailingWhitespaces()<CR>
+nnoremap <silent> <leader>s :call <SID>StripTrailingWhitespaces()<CR>
 nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
 nnoremap <leader>q :qa<CR> :set number!<CR>
 nnoremap <silent> <leader><space> :noh <CR>
