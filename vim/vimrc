@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vimwiki/vimwiki'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
