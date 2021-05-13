@@ -12,12 +12,18 @@ if [ -f ~/.zsh/antigen.zsh ]; then
         antigen bundle tmux
     fi
 
+    antigen bundle Aloxaf/fzf-tab
     antigen bundle zsh-users/zsh-autosuggestions
     antigen theme romkatv/powerlevel10k
     antigen apply
 
     # Powerlevel10k theme
     [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
+fi
+
+# fzf
+if [ -f /usr/share/fzf/shell/key-bindings.zsh ]; then
+    source /usr/share/fzf/shell/key-bindings.zsh
 fi
 
 # Shell environment
