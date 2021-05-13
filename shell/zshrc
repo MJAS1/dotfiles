@@ -22,17 +22,17 @@ fi
 
 # Shell environment
 if [ -f ~/.env ]; then
-    . ~/.env
+    source ~/.env
 fi
 
 # Aliases
 if [ -f ~/.aliases ]; then
-    . ~/.aliases
+    source ~/.aliases
 fi
 
 # Local settings
 if [ -f ~/.zshrc_local ]; then
-    . ~/.zshrc_local
+    source ~/.zshrc_local
 fi
 
 HISTFILE=~/.zsh_histfile
