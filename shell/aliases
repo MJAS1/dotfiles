@@ -30,7 +30,7 @@ alias twb="task +work burndown.daily"
 alias tp="task project:personal"
 alias tm="task minimal"
 alias tpm="task minimal project:personal"
-alias twm="task minimal project:work"
+alias twm="task minimal +work"
 
 # Ledger-CLI
 alias led="ledger balance Assets --exchange €"
