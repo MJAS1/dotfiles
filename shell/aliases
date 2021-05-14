@@ -25,6 +25,7 @@ alias gpuo="git push -u origin"
 
 # Taskwarrior
 alias t="task"
+alias tt="task +TODAY"
 alias tw="task +work"
 alias twt="task +work +TODAY"
 alias twg="task +work +gitlab"
