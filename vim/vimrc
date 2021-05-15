@@ -137,14 +137,6 @@ noremap <silent> <C-l> :wincmd l<CR>
 noremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
 
-" Move lines
-nnoremap <C-k> :m .-2<CR>==
-nnoremap <C-j> :m .+1<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
-
 " fzf
 noremap <C-f> :Rg<CR>
 noremap <C-p> :Files<CR>
