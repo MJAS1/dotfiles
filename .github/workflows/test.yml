@@ -31,10 +31,11 @@ jobs:
         test -f ~/.tmux.conf.bk
         test -f ~/.env.bk
         test -f ~/.zshrc.bk
+        test -f ~/.taskrc
         test -d ~/.vim.bk
         test -d ~/.zsh.bk
         test -d ~/.i3.bk
-        test -d ~/.taskrc
+        test -d ~/.task.bk
 
     - name: Test that default packages were installed
       run: |

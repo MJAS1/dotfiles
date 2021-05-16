@@ -18,6 +18,7 @@ readonly DOTFILES=(
     i3
     zsh
     vim
+    task
 )
 
 install_dotfile()
