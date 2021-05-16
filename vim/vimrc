@@ -145,6 +145,9 @@ noremap <leader>l :Lines<CR>
 noremap <leader>b :BLines<CR>
 noremap <leader>c :Commits<CR>
 
+" easymotion: s to jump to a character
+nmap s <Plug>(easymotion-s2)
+
 noremap <F10> :cprev <CR>
 noremap <F12> :cnext <CR>
 
