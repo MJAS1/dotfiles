@@ -14,6 +14,7 @@ readonly DOTFILES=(
     git/gitconfig
     git/gitignore_global
     tmux/tmux.conf
+    task/taskrc
     i3
     zsh
     vim

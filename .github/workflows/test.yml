@@ -16,7 +16,7 @@ jobs:
     - name: Create dummy files
       run: |
         touch ~/.bashrc ~/.gitconfig ~/.gitcongig_global ~/.aliases
-        touch ~/.tmux.conf ~/.env ~/.zshrc
+        touch ~/.tmux.conf ~/.env ~/.zshrc ~/.taskrc
         mkdir ~/.vim ~/.zsh ~/.i3
 
     - name: Install dotfiles and default packages
@@ -34,6 +34,7 @@ jobs:
         test -d ~/.vim.bk
         test -d ~/.zsh.bk
         test -d ~/.i3.bk
+        test -d ~/.taskrc
 
     - name: Test that default packages were installed
       run: |
