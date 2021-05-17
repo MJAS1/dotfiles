@@ -52,6 +52,14 @@ alias ns="npm start"
 alias nt="npm test"
 alias nr="npm run"
 
+# Docker
+alias dr="docker run"
+alias dim="docker images"
+alias dri="docker rmi"
+alias drm="docker rm"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+
 # Create a temporary directory and cd to it
 tmpcd()
 {
