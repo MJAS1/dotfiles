@@ -35,6 +35,8 @@ alias tp="task project:personal"
 alias tm="task minimal"
 alias tpm="task minimal project:personal"
 alias twm="task minimal +work"
+alias tps="task project:studies"
+alias tpsm="task project:studies minimal"
 
 # Ledger-CLI
 alias led="ledger balance Assets --exchange €"
