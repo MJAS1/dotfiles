@@ -14,6 +14,7 @@ if [ -f ~/.zsh/antigen.zsh ]; then
 
     antigen bundle Aloxaf/fzf-tab
     antigen bundle zsh-users/zsh-autosuggestions
+    antigen bundle zsh-users/zsh-syntax-highlighting
     antigen theme romkatv/powerlevel10k
     antigen bundle agkozak/zsh-z
     antigen apply
