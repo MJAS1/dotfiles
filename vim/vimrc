@@ -168,6 +168,10 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" autoreload file for changes
+set autoread
+au CursorHold * checktime
+
 set relativenumber
 set wildmenu
 set showcmd
