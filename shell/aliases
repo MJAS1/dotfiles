@@ -54,6 +54,8 @@ alias nr="npm run"
 
 # Docker
 alias dr="docker run"
+alias ds="docker stop"
+alias drit="docker run -it --rm"
 alias dim="docker images"
 alias dri="docker rmi"
 alias drm="docker rm"
