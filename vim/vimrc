@@ -137,6 +137,12 @@ nnoremap <S-Tab> :bp <CR>
 noremap <silent> <C-h> :wincmd h<CR>
 noremap <silent> <C-l> :wincmd l<CR>
 
+" Better mappings for Finnish keyboard layout
+map ö [
+map ä ]
+map Ö {
+map Ä }
+
 " Use ctrl-s to save
 noremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
