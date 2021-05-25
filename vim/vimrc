@@ -150,6 +150,10 @@ noremap <leader>c :Commits<CR>
 " easymotion: s to jump to a character
 nmap s <Plug>(easymotion-s2)
 
+" Fugitive
+nnoremap <C-g><C-s> :Gstatus<CR>
+nnoremap <C-g><C-g> :Git graph<CR>
+
 noremap <F10> :cprev <CR>
 noremap <F12> :cnext <CR>
 
