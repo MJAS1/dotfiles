@@ -11,6 +11,10 @@ syntax on
 " Setup vim-plug plugin manager
 "------------------------------------------------------------------------------
 
+" Disable LSP features in ALE before loading plugins. LSP features are
+" provided by coc.vim
+let g:ale_disable_lsp = 1
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
