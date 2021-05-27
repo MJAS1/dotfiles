@@ -161,9 +161,6 @@ nmap s <Plug>(easymotion-s2)
 nnoremap <C-g><C-s> :Gstatus<CR>
 nnoremap <C-g><C-g> :Git graph<CR>
 
-noremap <F10> :cprev <CR>
-noremap <F12> :cnext <CR>
-
 inoremap jj <Esc>
 
 nnoremap <silent> <leader>s :call <SID>StripTrailingWhitespaces()<CR>
