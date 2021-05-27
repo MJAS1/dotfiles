@@ -27,6 +27,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'sodapopcan/vim-twiggy'
 Plug 'morhetz/gruvbox'
 Plug 'vim-ctrlspace/vim-ctrlspace'
@@ -69,6 +70,10 @@ let g:airline_powerline_fonts = 1
 set background=dark
 set termguicolors
 let g:gruvbox_transparent_bg = 1
+
+" gv
+" Don't fold diffs
+autocmd FileType GV set foldlevel=1
 
 "------------------------------------------------------------------------------
 " Functions
@@ -160,7 +165,9 @@ nmap s <Plug>(easymotion-s2)
 
 " Fugitive
 nnoremap <C-g><C-s> :Gstatus<CR>
-nnoremap <C-g><C-g> :Git graph<CR>
+
+" gv
+nnoremap <C-g><C-g> :GV --all<CR>
 
 " Twiggy
 nnoremap <C-g><C-b> :Twiggy<CR>
