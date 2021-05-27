@@ -25,8 +25,9 @@ Plug 'bling/vim-airline'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
+Plug 'sodapopcan/vim-twiggy'
 Plug 'morhetz/gruvbox'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vimwiki/vimwiki'
@@ -160,6 +161,9 @@ nmap s <Plug>(easymotion-s2)
 " Fugitive
 nnoremap <C-g><C-s> :Gstatus<CR>
 nnoremap <C-g><C-g> :Git graph<CR>
+
+" Twiggy
+nnoremap <C-g><C-b> :Twiggy<CR>
 
 inoremap jj <Esc>
 
