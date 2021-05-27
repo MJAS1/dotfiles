@@ -131,7 +131,7 @@ noremap <silent> <C-h> :wincmd h<CR>
 noremap <silent> <C-l> :wincmd l<CR>
 
 " Better mappings for Finnish keyboard layout. [[, ]] etc. have to be mapped
-" separately from the single character variations for them to work.
+" separately from the single character variants for them to work.
 map ö [
 map ä ]
 map öö [[
