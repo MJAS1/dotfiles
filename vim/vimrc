@@ -165,6 +165,7 @@ nmap s <Plug>(easymotion-s2)
 
 " Fugitive
 nnoremap <C-g><C-s> :Gstatus<CR>
+nnoremap <C-g><C-p> :Git add --patch %<CR>
 
 " gv
 nnoremap <C-g><C-g> :GV --all<CR>
