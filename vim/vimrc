@@ -156,8 +156,8 @@ inoremap <c-s> <Esc>:w<CR>a
 " fzf
 noremap <C-f> :Rg<CR>
 noremap <C-p> :Files<CR>
+noremap <C-b> :BLines<CR>
 noremap <leader>l :Lines<CR>
-noremap <leader>b :BLines<CR>
 noremap <leader>c :Commits<CR>
 
 " easymotion: s to jump to a character
