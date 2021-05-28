@@ -153,6 +153,11 @@ map Ä }
 noremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
 
+" Store relative line number jumps in the jumplist:
+" https://stackoverflow.com/questions/29746445/is-there-a-vim-command-to-undo-the-last-motion-e-g-countj-or-ctrl-f/29746735#29746735
+nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
+nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
+
 " fzf
 noremap <C-f> :Rg<CR>
 noremap <C-p> :Files<CR>
