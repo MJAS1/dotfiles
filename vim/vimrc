@@ -191,7 +191,6 @@ nnoremap <C-x><C-t> :call ToggleTransparentBackground()<CR>
 " Commands
 "------------------------------------------------------------------------------
 
-command GG Git graph
 command RV source $MYVIMRC
 
 "------------------------------------------------------------------------------
