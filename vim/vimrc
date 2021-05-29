@@ -32,6 +32,7 @@ Plug 'sodapopcan/vim-twiggy'
 Plug 'morhetz/gruvbox'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vimwiki/vimwiki'
+Plug 'tools-life/taskwiki'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
