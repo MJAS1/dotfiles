@@ -152,6 +152,9 @@ map äÄ ]}
 map Ö {
 map Ä }
 
+" Yank from current cursor position to the end of line.
+map Y y$
+
 " Use ctrl-s to save
 noremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
