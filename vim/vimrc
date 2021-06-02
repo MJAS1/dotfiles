@@ -40,6 +40,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'dhruvasagar/vim-zoom'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -180,6 +181,10 @@ nnoremap <C-g><C-g> :GV --all<CR>
 
 " Twiggy
 nnoremap <C-g><C-b> :Twiggy<CR>
+
+" GitGutter
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 
 inoremap jj <Esc>
 
