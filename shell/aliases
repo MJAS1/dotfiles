@@ -48,6 +48,10 @@ alias ledei="lede Income --invert -b 'this month' --depth 3"
 alias ledea="ledger balance Expenses"
 alias ledeia="lede Income --invert"
 alias ledli="ledger balance Liabilities"
+alias leda="ledger bal Allocation -X € --current --format '\
+        %-19((depth_spacer)+(partial_account))\
+        %10(percent(market(display_total), market(parent.total, value_date, exchange)))\
+        %16(market(display_total))\n%/'"
 
 # NPM
 alias ns="npm start"
