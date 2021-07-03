@@ -7,8 +7,10 @@ let mapleader=","
 syntax on
 
 "------------------------------------------------------------------------------
-" Setup vim-plug plugin manager
+" Setup plugins
 "------------------------------------------------------------------------------
+
+packadd! matchit
 
 " Disable LSP features in ALE before loading plugins. LSP features are
 " provided by coc.vim
