@@ -250,8 +250,8 @@ augroup CursorLine
 augroup END
 
 " Highlight trailing spaces
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " Toggle pasting
 set pastetoggle=<F2>
