@@ -225,7 +225,7 @@ inoremap jj <Esc>
 nnoremap <silent> <leader>s :call <SID>StripTrailingWhitespaces()<CR>
 nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
 nnoremap <leader>q :qa<CR> :set number!<CR>
-nnoremap <silent> <leader><space> :noh <CR>
+nnoremap <silent> <leader><space> :nohlsearch <CR>
 nnoremap <C-x><C-t> :call ToggleTransparentBackground()<CR>
 
 "------------------------------------------------------------------------------
@@ -248,6 +248,7 @@ set fileformats=unix,dos
 set backspace=indent,eol,start
 set history=200
 set listchars=tab:▸\ ,eol:¬
+set pastetoggle=<F2>
 
 set autoindent
 set hidden
@@ -265,9 +266,6 @@ set t_ut=
 " Enable mouse usage
 set mouse=a
 set ttymouse=xterm2
-
-" Toggle pasting
-set pastetoggle=<F2>
 
 "------------------------------------------------------------------------------
 " Autocommands
