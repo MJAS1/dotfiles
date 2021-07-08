@@ -259,6 +259,7 @@ set relativenumber
 set wildmenu
 set showcmd
 set termguicolors
+set hlsearch
 
 " Fix background on some terminals
 " See: https://sunaku.github.io/vim-256color-bce.html
