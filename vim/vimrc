@@ -51,7 +51,6 @@ let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowLineNumbers = 1
 
 " Tagbar
-nmap <F8> :TagbarToggle<CR>
 let g:tagbar_show_linenumbers = -1
 
 " Airline
@@ -232,6 +231,9 @@ nmap [h <Plug>(GitGutterPrevHunk)
 
 " Git Blame
 nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
 
 inoremap jj <Esc>
 
