@@ -201,7 +201,7 @@ nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
 nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
 
 " NERDTree
-map <silent> <C-n> :NERDTreeToggle<CR> :call UpdateNerdTreeRoot()<CR>
+map <silent> <C-n> :NERDTreeToggle `pwd`<CR>
 
 " fzf
 noremap <C-f> :Rg<CR>
