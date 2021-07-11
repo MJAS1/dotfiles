@@ -92,7 +92,7 @@ let g:gruvbox_guisp_fallback = "bg"
 autocmd FileType GV set foldlevel=1
 
 "------------------------------------------------------------------------------
-" Colorsheme
+" Color scheme
 "------------------------------------------------------------------------------
 
 set background=dark
@@ -142,7 +142,7 @@ inoremap {{     {
 inoremap {}     {}
 inoremap {;<CR>     {<CR>};<ESC>O
 
-" Autoclose parantheses
+" Autoclose parentheses
 inoremap (      ()<Left>
 inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
