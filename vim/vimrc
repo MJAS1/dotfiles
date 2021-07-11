@@ -130,6 +130,12 @@ function! ToggleTransparentBackground()
     endif
 endfunction
 
+function! UpdateNerdTreeRoot()
+    if g:NERDTree.IsOpen()
+       :NERDTreeCWD
+    endif
+endfunction
+
 "------------------------------------------------------------------------------
 " Mappings
 "------------------------------------------------------------------------------
@@ -202,7 +208,7 @@ nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
 nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
 
 " NERDTree
-map <C-n> : NERDTreeToggle<CR> :set relativenumber<CR>
+map <C-n> :NERDTreeToggle<CR> :set relativenumber<CR> :call UpdateNerdTreeRoot()<CR>
 
 " fzf
 noremap <C-f> :Rg<CR>
@@ -293,6 +299,11 @@ augroup CursorLine
     autocmd!
     autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
+augroup END
+
+augroup DirChange
+    autocmd!
+    autocmd DirChanged global call UpdateNerdTreeRoot()
 augroup END
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
