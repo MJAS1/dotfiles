@@ -253,6 +253,7 @@ nnoremap <C-x><C-t> :call ToggleTransparentBackground()<CR>
 "------------------------------------------------------------------------------
 
 command RV source $MYVIMRC
+command Gpo Git push origin
 
 "------------------------------------------------------------------------------
 " Options
