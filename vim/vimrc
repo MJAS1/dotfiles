@@ -275,6 +275,12 @@ set t_ut=
 set mouse=a
 set ttymouse=xterm2
 
+" Use ripgrep for grep
+if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
 "------------------------------------------------------------------------------
 " Autocommands
 "------------------------------------------------------------------------------
