@@ -215,7 +215,7 @@ noremap <leader>c :Commits<CR>
 nmap s <Plug>(easymotion-s2)
 
 " Fugitive
-nnoremap <C-g><C-s> :Gstatus<CR>
+nnoremap <C-g><C-s> :Git<CR>
 nnoremap <C-g><C-p> :Git add --patch %<CR>
 nnoremap <C-g><C-o> :Git commit -v<CR>
 
