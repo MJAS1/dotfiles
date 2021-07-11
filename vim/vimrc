@@ -50,35 +50,9 @@ call plug#end()
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowLineNumbers = 1
 
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter *
-\ if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-\     quit |
-\ endif
-
-" If another buffer tries to replace NERDTree, put it in the other window, and
-" bring back NERDTree.
-autocmd BufEnter *
-\ if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-\     let buf=bufnr() |
-\     buffer# |
-\     execute "normal! \<C-W>w" |
-\     execute 'buffer'.buf |
-\ endif
-
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_show_linenumbers = -1
-
-" If another buffer tries to replace Tagbar, put it in the other window, and
-" bring back Tagbar.
-autocmd BufEnter *
-\ if bufname('#') =~ 'Tagbar' && bufname('%') !~ 'Tagbar' && winnr('$') > 1 |
-\     let buf=bufnr() |
-\     buffer# |
-\     execute "normal! \<C-W>w" |
-\     execute 'buffer'.buf |
-\ endif
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -88,9 +62,6 @@ let g:airline_powerline_fonts = 1
 let g:gruvbox_transparent_bg = 1
 let g:gruvbox_guisp_fallback = "bg"
 
-" gv
-" Don't fold diffs
-autocmd FileType GV set foldlevel=1
 
 "------------------------------------------------------------------------------
 " Color scheme
@@ -135,6 +106,24 @@ endfunction
 function! UpdateNerdTreeRoot()
     if g:NERDTree.IsOpen()
        :NERDTreeCWD
+    endif
+endfunction
+
+" Exit Vim if NERDTree is the only window left.
+function! QuitIfOnlyNerdTree()
+    if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()
+        quit
+    endif
+endfunction
+
+" If another buffer tries to replace the buffer defined in the argument, put
+" it in the other window, and bring back the original buffer.
+function DontAllowReplacing(bufferName)
+    if bufname('#') =~ a:bufferName && bufname('%') !~ a:bufferName && winnr('$') > 1
+        let buf=bufnr()
+        buffer#
+        execute "normal! \<C-W>w"
+        execute 'buffer'.buf
     endif
 endfunction
 
@@ -316,10 +305,21 @@ augroup DirChange
     autocmd DirChanged global call UpdateNerdTreeRoot()
 augroup END
 
+augroup DontReplace
+    autocmd!
+    autocmd BufEnter * call DontAllowReplacing('NERD_tree_\d\+')
+    autocmd BufEnter * call DontAllowReplacing('Tagbar')
+augroup END
+
+autocmd BufEnter * call QuitIfOnlyNerdTree()
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 " autoreload file for changes
 autocmd CursorHold * checktime
+
+" gv
+" Don't fold diffs
+autocmd FileType GV set foldlevel=1
 
 "------------------------------------------------------------------------------
 " coc configuration
