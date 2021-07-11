@@ -46,7 +46,6 @@ call plug#end()
 "------------------------------------------------------------------------------
 
 " NERDTree
-map <C-n> : NERDTreeToggle<CR> :set relativenumber<CR>
 let g:NERDTreeChDirMode = 2
 
 " Exit Vim if NERDTree is the only window left.
@@ -201,6 +200,9 @@ inoremap <c-s> <Esc>:w<CR>a
 " https://stackoverflow.com/questions/29746445/is-there-a-vim-command-to-undo-the-last-motion-e-g-countj-or-ctrl-f/29746735#29746735
 nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
 nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
+
+" NERDTree
+map <C-n> : NERDTreeToggle<CR> :set relativenumber<CR>
 
 " fzf
 noremap <C-f> :Rg<CR>
