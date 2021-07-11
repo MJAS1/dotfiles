@@ -229,6 +229,7 @@ nmap s <Plug>(easymotion-s2)
 nnoremap <C-g><C-s> :Git<CR>
 nnoremap <C-g><C-p> :Git add --patch %<CR>
 nnoremap <C-g><C-o> :Git commit -v<CR>
+nnoremap <C-g><C-l> :Gblame<CR>
 
 " gv
 nnoremap <C-g><C-g> :GV --all<CR>
