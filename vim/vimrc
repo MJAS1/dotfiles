@@ -38,6 +38,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'airblade/vim-gitgutter'
+Plug 'zivyangll/git-blame.vim'
 
 call plug#end()
 
@@ -234,6 +235,9 @@ nnoremap <C-g><C-b> :Twiggy<CR>
 " GitGutter
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
+
+" Git Blame
+nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
 
 inoremap jj <Esc>
 
