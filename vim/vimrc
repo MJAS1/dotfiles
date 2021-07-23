@@ -315,15 +315,28 @@ augroup DontReplace
     autocmd BufEnter * call DontAllowReplacing('Tagbar')
 augroup END
 
-autocmd BufEnter * call QuitIfOnlyNerdTree()
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+augroup Quit
+    autocmd!
+    autocmd BufEnter * call QuitIfOnlyNerdTree()
+augroup END
+
+augroup ColorScheme
+    autocmd!
+    autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+augroup END
 
 " autoreload file for changes
-autocmd CursorHold * checktime
+augroup FileChanges
+    autocmd!
+    autocmd CursorHold * checktime
+augroup END
 
 " gv
 " Don't fold diffs
-autocmd FileType GV set foldlevel=1
+augroup Gv
+    autocmd!
+    autocmd FileType GV set foldlevel=1
+augroup END
 
 "------------------------------------------------------------------------------
 " coc configuration
