@@ -320,7 +320,7 @@ augroup Quit
     autocmd BufEnter * call QuitIfOnlyNerdTree()
 augroup END
 
-augroup ColorScheme
+augroup TrailingSpaces
     autocmd!
     autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 augroup END
