@@ -200,6 +200,15 @@ nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle `pwd`<CR>
 
+" vim-unimpaired
+" http://vimcasts.org/episodes/bubbling-text/
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
 " fzf
 noremap <C-f> :Rg<CR>
 noremap <C-p> :Files<CR>
