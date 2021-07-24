@@ -1,5 +1,4 @@
 filetype plugin indent on
-let mapleader=","
 syntax on
 
 "------------------------------------------------------------------------------
@@ -43,8 +42,10 @@ Plug 'zivyangll/git-blame.vim'
 call plug#end()
 
 "------------------------------------------------------------------------------
-" Configure plugins
+" Configurations
 "------------------------------------------------------------------------------
+
+let mapleader=","
 
 " NERDTree
 let g:NERDTreeChDirMode = 2
