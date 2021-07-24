@@ -182,9 +182,6 @@ map Ä }
 " Yank from current cursor position to the end of line.
 nnoremap Y y$
 
-" Toggle spell check
-nmap <silent> <leader>s :set spell!<CR>
-
 " Make [[, ]], etc work even when '{' '}' is not in the first column
 map [[ ?{<CR>w99[{
 map ][ /}<CR>b99]}
