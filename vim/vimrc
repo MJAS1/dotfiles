@@ -224,14 +224,12 @@ nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle `pwd`<CR>
 
-" vim-unimpaired
-" http://vimcasts.org/episodes/bubbling-text/
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+" vim-unimpaird
+" Pressing Alt in terminal sends escape, so in order to map Alt key, use <Esc>
+nmap <Esc>k [e
+nmap <Esc>j ]e
+vmap <Esc>k [egv
+vmap <Esc>j ]egv
 
 " fzf
 noremap <C-f> :Rg<CR>
