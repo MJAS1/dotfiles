@@ -390,7 +390,7 @@ augroup END
 " autoreload file for changes
 augroup FileChanges
     autocmd!
-    autocmd CursorHold * checktime
+    autocmd CursorHold * silent! checktime
 augroup END
 
 " gv
