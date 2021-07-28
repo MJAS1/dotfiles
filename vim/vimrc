@@ -144,6 +144,8 @@ endfunction
 " Mappings
 "------------------------------------------------------------------------------
 
+inoremap jj <Esc>
+
 " Autoclose braces
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -203,8 +205,6 @@ map [] k$][%?}<CR>
 " Use ctrl-s to save
 noremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
-
-inoremap jj <Esc>
 
 nnoremap <silent> <leader>w :call <SID>StripTrailingWhitespaces()<CR>
 nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
