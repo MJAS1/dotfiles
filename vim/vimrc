@@ -221,7 +221,7 @@ nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle `pwd`<CR>
 
-" vim-unimpaird
+" vim-unimpaired
 " Pressing Alt in terminal sends escape, so in order to map Alt key, use <Esc>
 nmap <Esc>k [e
 nmap <Esc>j ]e
