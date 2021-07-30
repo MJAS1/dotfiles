@@ -328,6 +328,7 @@ set autoindent
 set hidden
 set incsearch
 set autoread
+set number
 set relativenumber
 set wildmenu
 set showcmd
