@@ -303,6 +303,7 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 " Commands
 "------------------------------------------------------------------------------
 
+command EV vsplit $MYVIMRC
 command SV source $MYVIMRC
 command Gpo Git push origin
 
