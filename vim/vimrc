@@ -299,6 +299,9 @@ vmap <C-j> <Plug>(coc-snippets-select)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
+onoremap b (
+onoremap B {
+
 "------------------------------------------------------------------------------
 " Commands
 "------------------------------------------------------------------------------
