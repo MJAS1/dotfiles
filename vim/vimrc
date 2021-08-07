@@ -178,6 +178,8 @@ nnoremap <S-Tab> :bp <CR>
 
 " Windows
 noremap <silent> <C-h> :wincmd h<CR>
+noremap <silent> <C-j> :wincmd j<CR>
+noremap <silent> <C-k> :wincmd k<CR>
 noremap <silent> <C-l> :wincmd l<CR>
 
 " Better mappings for Finnish keyboard layout. [[, ]] etc. have to be mapped
