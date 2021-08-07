@@ -340,6 +340,8 @@ set termguicolors
 set hlsearch
 set nobackup
 set nowritebackup
+set ignorecase
+set smartcase
 
 " Fix background on some terminals
 " See: https://sunaku.github.io/vim-256color-bce.html
