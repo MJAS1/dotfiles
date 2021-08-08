@@ -196,6 +196,7 @@ map öÖ [{
 map äÄ ]}
 map Ö {
 map Ä }
+map å `
 
 " Yank from current cursor position to the end of line.
 nnoremap Y y$
