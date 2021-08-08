@@ -2,7 +2,7 @@ filetype plugin indent on
 syntax on
 
 "------------------------------------------------------------------------------
-" Setup plugins
+" Setup plugins {{{
 "------------------------------------------------------------------------------
 
 packadd! matchit
@@ -42,8 +42,9 @@ Plug 'honza/vim-snippets'
 
 call plug#end()
 
+" }}}
 "------------------------------------------------------------------------------
-" Configurations
+" Configurations {{{
 "------------------------------------------------------------------------------
 
 let mapleader=","
@@ -67,8 +68,9 @@ let g:gruvbox_guisp_fallback = "bg"
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
+" }}}
 "------------------------------------------------------------------------------
-" Color scheme
+" Color scheme {{{
 "------------------------------------------------------------------------------
 
 set background=dark
@@ -78,8 +80,9 @@ colorscheme gruvbox
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+" }}}
 "------------------------------------------------------------------------------
-" Functions
+" Functions {{{
 "------------------------------------------------------------------------------
 
 " From: http://vimcasts.org/episodes/tidying-whitespace/
@@ -140,8 +143,9 @@ function! s:show_documentation()
   endif
 endfunction
 
+" }}}
 "------------------------------------------------------------------------------
-" Mappings
+" Mappings {{{
 "------------------------------------------------------------------------------
 
 inoremap jj <Esc>
@@ -307,16 +311,18 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 onoremap b (
 onoremap B {
 
+" }}}
 "------------------------------------------------------------------------------
-" Commands
+" Commands {{{
 "------------------------------------------------------------------------------
 
 command EV vsplit $MYVIMRC
 command SV source $MYVIMRC
 command Gpo Git push origin
 
+" }}}
 "------------------------------------------------------------------------------
-" Options
+" Options {{{
 "------------------------------------------------------------------------------
 
 set tabstop=4
@@ -367,8 +373,9 @@ if executable("rg")
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
+" }}}
 "------------------------------------------------------------------------------
-" Autocommands
+" Autocommands {{{
 "------------------------------------------------------------------------------
 
 " Highlight current line
@@ -399,6 +406,12 @@ augroup TrailingSpaces
     autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 augroup END
 
+" Fold vimrc
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
 " autoreload file for changes
 augroup FileChanges
     autocmd!
@@ -423,8 +436,11 @@ augroup coc
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
+" }}}
 "------------------------------------------------------------------------------
-" Misc
+" Misc {{{
 "------------------------------------------------------------------------------
 
 iabbrev rt return
+
+" }}}
