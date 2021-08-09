@@ -149,8 +149,6 @@ endfunction
 "------------------------------------------------------------------------------
 
 inoremap jj <Esc>
-nnoremap L $
-nnoremap H 0
 
 " Autoclose braces
 inoremap {      {}<Left>
