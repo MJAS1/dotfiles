@@ -310,6 +310,7 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 
 onoremap b (
 onoremap B {
+onoremap in :<c-u>normal! f(vi(<cr>
 
 " }}}
 "------------------------------------------------------------------------------
