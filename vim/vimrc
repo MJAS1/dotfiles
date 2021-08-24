@@ -177,8 +177,8 @@ inoremap '      ''<Left>
 inoremap ''     '
 
 " Buffers
-nnoremap <Tab> :bn <CR>
-nnoremap <S-Tab> :bp <CR>
+nnoremap <Tab> :CtrlSpaceGoUp<CR>
+nnoremap <S-Tab> :CtrlSpaceGoDown<CR>
 
 " Windows
 noremap <silent> <C-h> :wincmd h<CR>
