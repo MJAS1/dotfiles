@@ -64,6 +64,10 @@ let g:airline_powerline_fonts = 1
 let g:gruvbox_transparent_bg = 1
 let g:gruvbox_guisp_fallback = "bg"
 
+" coc
+" Prevent cursor from disappearing in some situations when CocList is closed
+let g:coc_disable_transparent_cursor = 1
+
 " coc-snippets
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
