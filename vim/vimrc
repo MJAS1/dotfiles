@@ -177,8 +177,6 @@ inoremap []     []
 " Autoclose quotes
 inoremap "      ""<Left>
 inoremap ""     "
-inoremap '      ''<Left>
-inoremap ''     '
 
 " Buffers
 nnoremap <Tab> :CtrlSpaceGoUp<CR>
