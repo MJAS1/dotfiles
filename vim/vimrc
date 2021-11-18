@@ -72,6 +72,10 @@ let g:coc_disable_transparent_cursor = 1
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
+" vimwiki
+" Do not associate all markdown files as vimwiki files
+let g:vimwiki_global_ext = 0
+
 " }}}
 "------------------------------------------------------------------------------
 " Color scheme {{{
