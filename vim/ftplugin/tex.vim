@@ -7,4 +7,4 @@ set shiftwidth=2
 " all the figure labels. Very useful!
 set iskeyword+=:
 
-set textwidth=79
+set textwidth=80
