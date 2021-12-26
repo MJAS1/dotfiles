@@ -49,7 +49,7 @@ HISTFILE=~/.zsh_histfile
 HISTSIZE=5000
 SAVEHIST=10000
 
-setopt autocd extendedglob nomatch notify
+setopt autocd extendedglob nomatch notify histignorespace
 bindkey -e
 
 # The following lines were added by compinstall
