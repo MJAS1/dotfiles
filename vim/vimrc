@@ -68,6 +68,12 @@ let g:gruvbox_guisp_fallback = "bg"
 " Prevent cursor from disappearing in some situations when CocList is closed
 let g:coc_disable_transparent_cursor = 1
 
+" ALE
+" Assume ARM assembly by default when editing asm files
+if executable("arm-none-eabi-gcc")
+    let g:ale_asm_gcc_executable="arm-none-eabi-gcc"
+endif
+
 " coc-snippets
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
