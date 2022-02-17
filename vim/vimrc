@@ -354,6 +354,7 @@ set listchars=tab:▸\ ,eol:¬
 set pastetoggle=<F2>
 set shortmess-=S
 set cmdheight=2
+set nrformats+=alpha
 
 set autoindent
 set hidden
