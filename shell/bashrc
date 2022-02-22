@@ -20,7 +20,8 @@ fi
 # Pass ctrl-s through applications
 stty -ixon
 
-shopt -s histappend
+shopt -s histappend globstar
+
 HISTCONTROL=ignoreboth
 HISTSIZE=5000
 HISTFILESIZE=10000
