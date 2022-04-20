@@ -231,7 +231,6 @@ noremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
 
 nnoremap <silent> <leader>w :call <SID>StripTrailingWhitespaces()<CR>
-nnoremap <leader>r :set relativenumber!<CR> :set number!<CR>
 nnoremap <leader>q :qa<CR> :set number!<CR>
 nnoremap <silent> <leader><space> :nohlsearch <CR>
 nnoremap <F5> :make<CR>
