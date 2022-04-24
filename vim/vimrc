@@ -10,33 +10,33 @@ let g:ale_disable_lsp = 1
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'Lokaltog/vim-easymotion'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'dense-analysis/ale'
+Plug 'dhruvasagar/vim-zoom'
+Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/gv.vim'
+Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'ryanoasis/vim-devicons'
+Plug 'sodapopcan/vim-twiggy'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'bling/vim-airline'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'tools-life/taskwiki'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
-Plug 'tpope/vim-endwise'
-Plug 'junegunn/gv.vim'
-Plug 'sodapopcan/vim-twiggy'
-Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vimwiki/vimwiki'
-Plug 'tools-life/taskwiki'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale'
-Plug 'dhruvasagar/vim-zoom'
-Plug 'airblade/vim-gitgutter'
 Plug 'zivyangll/git-blame.vim'
-Plug 'honza/vim-snippets'
 
 call plug#end()
 
