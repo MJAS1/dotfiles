@@ -357,9 +357,12 @@ set pastetoggle=<F2>
 set shortmess-=S
 set cmdheight=2
 set nrformats+=alpha
+set updatetime=300
+set signcolumn=yes
 
 set autoindent
 set hidden
+set hlsearch
 set incsearch
 set autoread
 set number
@@ -367,7 +370,6 @@ set relativenumber
 set wildmenu
 set showcmd
 set termguicolors
-set hlsearch
 set nobackup
 set nowritebackup
 set ignorecase
@@ -382,9 +384,7 @@ set mouse=a
 set ttymouse=xterm2
 
 " coc.vim related options
-set updatetime=300
 set shortmess+=c
-set signcolumn=yes
 
 " Use ripgrep for grep
 if executable("rg")
