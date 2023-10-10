@@ -43,11 +43,11 @@ install_vim_plugins()
 install_default_packages()
 {
     if command -v apt-get >/dev/null 2>&1; then
-        sudo apt-get install zsh powerline tmux fzf
+        sudo apt-get install zsh powerline tmux fzf vim
     elif command -v dnf >/dev/null 2>&1; then
-        sudo dnf install zsh tmux-powerline tmux fzf
+        sudo dnf install zsh tmux-powerline tmux fzf vim
     elif command -v pacman >/dev/null 2>&1; then
-        sudo pacman -S zsh powerline tmux fzf
+        sudo pacman -S zsh powerline tmux fzf vim
     else
         echo "Could not determine Linux distribution. Packages not installed" >&2
     fi
