@@ -17,8 +17,6 @@ if [[ -f ~/.aliases ]]; then
     . ~/.aliases
 fi
 
-# Pass ctrl-s through applications
-stty -ixon
 
 shopt -s histappend globstar
 
@@ -26,11 +24,13 @@ HISTCONTROL=ignoreboth
 HISTSIZE=5000
 HISTFILESIZE=10000
 
-# Check if we are running an interactive shell before modifying prompt.
+# Check if we are running an interactive shell before modifying prompt or stty.
 # Otherwise we may get random errors such as: "tput: no value for $TERM and no
 # -T specified"
 if [[ $- == *i* ]]; then
     export PS1="[\[$(tput sgr0)\]\[\033[38;5;2m\]\u@\H\[$(tput sgr0)\]:\[$(tput sgr0)\]\[\033[38;5;32m\]\w\[$(tput sgr0)\]]\\$ \[$(tput sgr0)\]"
+    # Pass ctrl-s through applications
+    stty -ixon
 fi
 
 # Local settings
