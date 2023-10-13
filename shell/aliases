@@ -70,6 +70,10 @@ alias drm="docker rm"
 alias dps="docker ps"
 alias dpsa="docker ps -a"
 
+# Python
+alias sv="source venv/bin/activate"
+alias ca="conda activate"
+
 # Misc
 alias bd="batdiff"
 
