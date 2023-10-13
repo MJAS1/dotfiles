@@ -207,6 +207,13 @@ noremap <silent> <C-j> :wincmd j<CR>
 noremap <silent> <C-k> :wincmd k<CR>
 noremap <silent> <C-l> :wincmd l<CR>
 
+" Files
+" Open files in the same directory as current file
+" http://vimcasts.org/episodes/the-edit-command/
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+
 " Folds
 nnoremap <space><space> za
 
