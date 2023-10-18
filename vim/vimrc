@@ -452,6 +452,9 @@ augroup FileChanges
     autocmd CursorHold * silent! checktime
 augroup END
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
 " gv
 " Don't fold diffs
 augroup Gv
