@@ -39,6 +39,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vimwiki/vimwiki'
 Plug 'zivyangll/git-blame.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
