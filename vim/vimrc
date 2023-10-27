@@ -203,12 +203,6 @@ inoremap ""     "
 nnoremap <Tab> :CtrlSpaceGoUp<CR>
 nnoremap <S-Tab> :CtrlSpaceGoDown<CR>
 
-" Windows
-noremap <silent> <C-h> :wincmd h<CR>
-noremap <silent> <C-j> :wincmd j<CR>
-noremap <silent> <C-k> :wincmd k<CR>
-noremap <silent> <C-l> :wincmd l<CR>
-
 " Files
 " Open files in the same directory as current file
 " http://vimcasts.org/episodes/the-edit-command/
