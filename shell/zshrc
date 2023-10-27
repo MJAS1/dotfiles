@@ -8,7 +8,6 @@ if [ -f ~/.zsh/antigen.zsh ]; then
     # Only autostart tmux if not running in ssh
     if [ -z "$SSH_CLIENT" ] && command -v tmux &>/dev/null; then
         ZSH_TMUX_AUTOSTART=true
-        ZSH_TMUX_AUTOCONNECT=false
         antigen bundle tmux
     fi
 
