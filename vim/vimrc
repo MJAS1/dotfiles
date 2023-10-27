@@ -303,6 +303,7 @@ nmap <F8> :TagbarToggle<CR>
 " Ale
 nmap <silent> [g <Plug>(ale_previous_wrap)
 nmap <silent> ]g <Plug>(ale_next_wrap)
+nmap <silent> yoa :ALEToggleBuffer<CR>
 
 " coc
 " Make <CR> to accept selected completion item or notify coc.nvim to format
