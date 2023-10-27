@@ -40,6 +40,7 @@ Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vimwiki/vimwiki'
 Plug 'zivyangll/git-blame.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
 
 call plug#end()
 
@@ -304,6 +305,10 @@ nmap <F8> :TagbarToggle<CR>
 nmap <silent> [g <Plug>(ale_previous_wrap)
 nmap <silent> ]g <Plug>(ale_next_wrap)
 nmap <silent> yoa :ALEToggleBuffer<CR>
+
+" vim-tmux-runner
+nnoremap <leader>va :VtrAttachToPane<cr>
+nnoremap <leader>vs :VtrSendCommandToRunner<cr>
 
 " coc
 " Make <CR> to accept selected completion item or notify coc.nvim to format
