@@ -40,6 +40,14 @@ install_vim_plugins()
     vim +PlugInstall +qa
 }
 
+install_bin_files()
+{
+    mkdir -p ~/bin
+    for file in bin/*; do
+        ln -s "$file" ~/bin/
+    done
+}
+
 install_default_packages()
 {
     if command -v apt-get >/dev/null 2>&1; then
@@ -67,6 +75,7 @@ main()
         install_dotfile "$dotfile"
     done
 
+    install_bin_files
     install_vim_plugins
 }
 
