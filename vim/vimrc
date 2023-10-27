@@ -10,7 +10,6 @@ let g:ale_disable_lsp = 1
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'AndrewRadev/switch.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
