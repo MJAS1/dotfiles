@@ -275,12 +275,7 @@ nnoremap <C-g><C-o> :Git commit -v<CR>
 nnoremap <C-g><C-l> :Git blame<CR>
 nnoremap <C-g><C-w> :Gwrite<CR>
 nnoremap <C-g><C-d> :Gdiffsplit!<CR>
-
-" gv
-nnoremap <C-g><C-g> :GV --all<CR>
-
-" Twiggy
-nnoremap <C-g><C-b> :Twiggy<CR>
+nnoremap <C-g><C-g> :Git graph<CR>
 
 " GitGutter
 nmap ]h <Plug>(GitGutterNextHunk)
