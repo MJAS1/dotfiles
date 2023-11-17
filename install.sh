@@ -24,6 +24,7 @@ readonly DOTFILES=(
 
 readonly CONFIG_DIRS=(
     kitty
+    i3
 )
 
 install_dotfile()
