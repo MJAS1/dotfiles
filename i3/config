@@ -182,6 +182,8 @@ bar {
 gaps inner 3
 gaps outer 3
 
+default_border pixel 3
+
 # Application shortcuts
 bindsym $mod+Ctrl+f exec --no-startup-id firefox
 bindsym $mod+Ctrl+p exec --no-startup-id firefox --private-window
