@@ -17,7 +17,7 @@ jobs:
       run: |
         touch ~/.bashrc ~/.gitconfig ~/.gitcongig_global ~/.aliases
         touch ~/.tmux.conf ~/.env ~/.zshrc ~/.taskrc
-        mkdir ~/.vim ~/.zsh ~/.i3 ~/.task
+        mkdir ~/.vim ~/.zsh ~/.i3 ~/.task ~/.config/kitty
 
     - name: Install dotfiles and default packages
       run: echo -e "y\nY" | ./install.sh
@@ -36,6 +36,7 @@ jobs:
         test -d ~/.zsh.bk
         test -d ~/.i3.bk
         test -d ~/.task.bk
+        test -d ~/.kitty.bk
 
     - name: Test that default packages were installed
       run: |

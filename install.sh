@@ -22,17 +22,34 @@ readonly DOTFILES=(
     task
 )
 
+readonly CONFIG_DIRS=(
+    kitty
+)
+
 install_dotfile()
 {
     local dotfile
     dotfile=.$(basename "$1")
 
     if [ -e ~/"$dotfile" ]; then
-        echo "$dotfile already exists in home folder. Creating a backup to $dotfile.bk"
+        echo "$dotfile already exists in home directory. Creating a backup to $dotfile.bk"
         mv ~/"$dotfile" ~/"$dotfile.bk"
     fi
 
     ln -s "$DIR/$1" ~/"$dotfile"
+}
+
+install_configuration()
+{
+    local config
+    config=$(basename "$1")
+
+    if [ -e ~/.config/"$config" ]; then
+        echo "$config already exists in .config directory. Creating a backup to $config.bk"
+        mv ~/.config/"$config" ~/.config/"$config.bk"
+    fi
+
+    ln -s "$DIR/config/$1" ~/.config/"$config"
 }
 
 install_vim_plugins()
@@ -51,13 +68,13 @@ install_bin_files()
 install_default_packages()
 {
     if command -v apt-get >/dev/null 2>&1; then
-        sudo apt-get install zsh powerline tmux fzf vim
+        sudo apt-get install zsh powerline tmux fzf vim kitty
     elif command -v dnf >/dev/null 2>&1; then
-        sudo dnf install zsh tmux-powerline tmux fzf vim
+        sudo dnf install zsh tmux-powerline tmux fzf vim kitty
     elif command -v pacman >/dev/null 2>&1; then
-        sudo pacman -S zsh powerline tmux fzf vim
+        sudo pacman -S zsh powerline tmux fzf vim kitty
     else
-        echo "Could not determine Linux distribution. Packages not installed" >&2
+        echo "Could not determine package manager. Packages not installed" >&2
     fi
 }
 
@@ -80,6 +97,10 @@ main()
 
     for dotfile in "${DOTFILES[@]}"; do
         install_dotfile "$dotfile"
+    done
+
+    for configuration in "${CONFIG_DIRS[@]}"; do
+        install_configuration "$configuration"
     done
 
     install_bin_files
