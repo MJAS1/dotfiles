@@ -25,6 +25,7 @@ readonly DOTFILES=(
 readonly CONFIG_DIRS=(
     kitty
     i3
+    polybar
 )
 
 install_dotfile()
