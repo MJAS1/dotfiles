@@ -43,6 +43,11 @@ jobs:
         command -v powerline
         command -v tmux
 
+    - name: Test that fonts were installed
+      run: |
+        fc-list | grep --quiet "MesloLGS"
+
+
     - name: Run shellcheck
       run: |
         shellcheck install.sh

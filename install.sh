@@ -61,6 +61,13 @@ install_default_packages()
     fi
 }
 
+install_fonts()
+{
+    mkdir -p ~/.fonts
+    cp fonts/* ~/.fonts
+    fc-cache -fv
+}
+
 main()
 {
     while true; do
@@ -77,6 +84,7 @@ main()
 
     install_bin_files
     install_vim_plugins
+    install_fonts
 }
 
 main
