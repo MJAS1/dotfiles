@@ -26,6 +26,7 @@ readonly CONFIG_DIRS=(
     i3
     polybar
     picom
+    rofi
 )
 
 install_dotfile()
