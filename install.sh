@@ -25,6 +25,7 @@ readonly CONFIG_DIRS=(
     kitty
     i3
     polybar
+    picom
 )
 
 install_dotfile()
