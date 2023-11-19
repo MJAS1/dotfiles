@@ -379,8 +379,6 @@ set smartcase
 " See: https://sunaku.github.io/vim-256color-bce.html
 set t_ut=
 
-" Enable mouse usage
-set mouse=a
 set ttymouse=xterm2
 
 " coc.vim related options
