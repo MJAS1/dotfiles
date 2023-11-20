@@ -64,7 +64,7 @@ install_bin_files()
 {
     mkdir -p ~/bin
     for file in bin/*; do
-        ln -s "$file" ~/bin/
+        ln -s "$DIR/$file" ~/bin/
     done
 }
 
