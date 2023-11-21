@@ -83,6 +83,11 @@ let g:coc_snippet_prev = '<c-k>'
 " Do not associate all markdown files as vimwiki files
 let g:vimwiki_global_ext = 0
 
+" ctrlspace
+if has('nvim')
+    let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+endif
+
 " }}}
 " Color scheme {{{
 "------------------------------------------------------------------------------
@@ -379,7 +384,9 @@ set smartcase
 " See: https://sunaku.github.io/vim-256color-bce.html
 set t_ut=
 
-set ttymouse=xterm2
+if !has('nvim')
+    set ttymouse=xterm2
+endif
 
 " coc.vim related options
 set shortmess+=c
