@@ -1,7 +1,9 @@
 [alias]
     graph = log --all --graph --oneline --decorate
+
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global
+
 [commit]
     verbose = true
