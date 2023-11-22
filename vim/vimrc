@@ -261,7 +261,8 @@ vmap <Esc>j ]egv
 " fzf
 noremap <C-f> :Rg<CR>
 noremap <C-p> :Files<CR>
-noremap <C-b> :BLines<CR>
+noremap <C-b><C-b> :Buffers<CR>
+noremap <C-b><C-f> :BLines<CR>
 noremap <leader>l :Lines<CR>
 noremap <leader>c :Commits<CR>
 
