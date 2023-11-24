@@ -167,6 +167,8 @@ endfunction
 
 inoremap jj <Esc>
 
+nnoremap <C-q> <C-w>c
+
 " <C-i> usage for jumplist navigation doesn't work when <Tab> has been
 " remapped since they are equivalent. Instead use Alt-i and Alt-o.
 nnoremap <Esc>i <C-i>
