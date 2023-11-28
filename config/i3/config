@@ -9,6 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+include ~/.config/i3/workspaces.conf
+
 set $mod Mod4
 
 # Set Finnish keyboard layout
