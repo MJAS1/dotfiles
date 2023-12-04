@@ -16,6 +16,7 @@ if [ -f ~/.zsh/antigen.zsh ]; then
     antigen bundle zsh-users/zsh-syntax-highlighting
     antigen theme romkatv/powerlevel10k
     antigen bundle agkozak/zsh-z
+    antigen bundle hlissner/zsh-autopair
     antigen apply
 
     # Powerlevel10k theme
