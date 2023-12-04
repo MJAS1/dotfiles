@@ -28,7 +28,7 @@ vim.keymap.set('', 'å', '`', { remap = true })
 vim.keymap.set('n', '<TAB>', '<cmd>bnext<CR>')
 vim.keymap.set('n', '<S-TAB>', '<cmd>bprevious<CR>')
 
-vim.keymap.set('n', '<leader><space>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', ',<space>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>yy', '"+yy')
