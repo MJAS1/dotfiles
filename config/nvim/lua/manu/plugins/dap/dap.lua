@@ -4,7 +4,7 @@ return {
         local dap = require('dap')
 
         vim.keymap.set('', '<F5>', function() dap.continue() end)
-        vim.keymap.set('', '<F9>', function() dap.set_breakpoint() end)
+        vim.keymap.set('', '<F9>', function() dap.toggle_breakpoint() end)
         vim.keymap.set('', '<F10>', function() dap.step_over() end)
         vim.keymap.set('', '<F11>', function() dap.step_into() end)
         vim.keymap.set('', '<F12>', function() dap.step_out() end)
