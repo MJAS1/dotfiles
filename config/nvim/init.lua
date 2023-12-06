@@ -44,6 +44,11 @@ vim.api.nvim_command("autocmd TermOpen * setlocal norelativenumber")
 
 vim.opt.termguicolors = true
 
+if vim.fn.executable('rg') == 1 then
+    vim.o.grepprg = 'rg --no-heading --vimgrep'
+    vim.o.grepformat ='%f:%l:%c:%m,%f:%l:%m'
+end
+
 local wr_group = vim.api.nvim_create_augroup('WinResize', { clear = true })
 
 vim.api.nvim_create_autocmd(
