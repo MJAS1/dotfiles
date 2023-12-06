@@ -35,7 +35,7 @@ vim.keymap.set('n', '<leader>yy', '"+yy')
 vim.keymap.set('n', '<leader>p', '"+p')
 vim.keymap.set('n', '<leader>P', '"+P')
 
-vim.keymap.set('t', 'jj', '<C-\\><C-n>')
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
 
 vim.api.nvim_command("autocmd TermOpen * setlocal nonumber")
