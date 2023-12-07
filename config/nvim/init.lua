@@ -53,6 +53,7 @@ if vim.fn.executable('rg') == 1 then
 end
 
 local wr_group = vim.api.nvim_create_augroup('WinResize', { clear = true })
+local qf_group = vim.api.nvim_create_augroup('Quickfixlist', { clear = true })
 
 vim.api.nvim_create_autocmd(
     'VimResized',
@@ -61,6 +62,16 @@ vim.api.nvim_create_autocmd(
         pattern = '*',
         command = 'wincmd =',
         desc = 'Automatically resize windows when the host window size changes.'
+    }
+)
+
+vim.api.nvim_create_autocmd(
+    'FileType',
+    {
+        group = qf_group,
+        pattern = 'qf',
+        command = 'wincmd J',
+        desc = 'Place quickfixlist at the bottom'
     }
 )
 
