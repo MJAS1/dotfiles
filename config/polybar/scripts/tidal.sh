@@ -9,8 +9,8 @@ case $BLOCK_BUTTON in
 esac
 
 if "$TIDAL_CLI" status | grep 'paused' >/dev/null; then
-  printf '  ' # fa-pause
+  printf ' ' # fa-pause
 else
-  printf '  ' # fa-play
+  printf ' ' # fa-play
 fi
 "$TIDAL_CLI" info
