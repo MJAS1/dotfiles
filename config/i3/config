@@ -8,6 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+set $tidal ~/bin/tidal-cli.sh
 
 include ~/.config/i3/workspaces.conf
 
@@ -233,6 +234,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 
+bindsym $mod+Right exec $tidal next
+bindsym $mod+Left exec $tidal previous
+bindsym $mod+Delete exec $tidal playpause
 
 exec_always --no-startup-id autorandr --change
 exec_always --no-startup-id dunst
