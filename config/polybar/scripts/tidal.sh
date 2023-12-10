@@ -8,9 +8,12 @@ case $BLOCK_BUTTON in
 5) "$TIDAL_CLI" previous ;; # scroll down
 esac
 
-if "$TIDAL_CLI" status | grep 'paused' >/dev/null; then
-  printf ' ' # fa-pause
-else
-  printf ' ' # fa-play
+info=$("$TIDAL_CLI" info)
+if [[ "$info" != "No music info available" ]]; then
+    if "$TIDAL_CLI" status | grep 'paused' >/dev/null; then
+        printf ' '
+    else
+        printf ' '
+    fi
+    "$TIDAL_CLI" info
 fi
-"$TIDAL_CLI" info
