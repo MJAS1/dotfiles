@@ -59,7 +59,7 @@ install_bin_files()
 {
     mkdir -p ~/bin
     for file in bin/*; do
-        ln -s "$DIR/$file" ~/bin/
+        ln --symbolic --force "$DIR/$file" ~/bin/
     done
 }
 
