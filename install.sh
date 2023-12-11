@@ -39,7 +39,7 @@ install_dotfile()
         mv ~/"$dotfile" ~/"$dotfile.bk"
     fi
 
-    ln -s "$DIR/$1" ~/"$dotfile"
+    ln --symbolic "$DIR/$1" ~/"$dotfile"
 }
 
 install_configuration()
@@ -52,12 +52,7 @@ install_configuration()
         mv ~/.config/"$config" ~/.config/"$config.bk"
     fi
 
-    ln -s "$DIR/config/$1" ~/.config/"$config"
-}
-
-install_vim_plugins()
-{
-    vim +PlugInstall +qa
+    ln --symbolic "$DIR/config/$1" ~/.config/"$config"
 }
 
 install_bin_files()
@@ -107,7 +102,6 @@ main()
     done
 
     install_bin_files
-    install_vim_plugins
     install_fonts
 }
 
