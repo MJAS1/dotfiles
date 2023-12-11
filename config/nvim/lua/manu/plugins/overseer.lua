@@ -17,6 +17,6 @@ return {
             },
 
         })
-        vim.keymap.set('', '<C-b>', '<cmd>OverseerRun<CR>', { remap = true })
+        vim.keymap.set('', '<leader>o', '<cmd>OverseerRun<CR>', { remap = true })
     end
 }
