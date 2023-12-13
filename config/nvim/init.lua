@@ -1,6 +1,7 @@
 vim.g.mapleader = ' '
 vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set('', '<C-s>', '<cmd>w<CR>')
+vim.keymap.set('i', '<C-s>', '<cmd>w<CR>')
 vim.keymap.set('', '<C-q>', '<C-w>c')
 vim.opt.tabstop=4
 vim.opt.softtabstop=4
