@@ -27,6 +27,7 @@ readonly CONFIG_DIRS=(
     polybar
     picom
     rofi
+    nvim
 )
 
 install_dotfile()
