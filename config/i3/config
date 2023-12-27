@@ -49,6 +49,8 @@ bindsym $mod+Shift+q kill
 bindcode $mod+40 exec "rofi -modi drun,run -show drun -theme ~/.config/rofi/theme.rasi -show-icons"
 # Power menu
 bindsym $mod+x exec "rofi -modi power-menu:~/bin/rofi-power-menu -show power-menu -theme ~/.config/rofi/theme.rasi -show-icons"
+# Bluetooth menu
+bindsym $mod+Shift+b exec "~/bin/rofi-bluetooth -theme ~/.config/rofi/theme.rasi"
 
 # change focus
 bindsym $mod+h focus left
