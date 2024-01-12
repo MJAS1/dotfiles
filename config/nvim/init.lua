@@ -12,6 +12,12 @@ vim.opt.autoindent=true
 vim.opt.number=true
 vim.opt.relativenumber=true
 
+vim.opt.autoread=true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
+
 -- Better mappings for Finnish keyboard layout. [[, ]] etc. have to be mapped
 -- separately from the single character variants for them to work.
 vim.keymap.set('', 'ö', '[', { remap = true })
