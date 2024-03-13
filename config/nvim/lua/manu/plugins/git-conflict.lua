@@ -8,6 +8,10 @@ return {
             highlights = {
                 incoming = 'Incoming',
                 current = 'Current',
+            },
+            default_mappings = {
+                next = ']x',
+                prev = '[x',
             }
         })
     end
