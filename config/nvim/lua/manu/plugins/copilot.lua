@@ -12,13 +12,15 @@ return {
           suggestion = {
               enabled = true,
               auto_trigger = true,
+              keymap = {
+                  accept_line = '<C-e>',
+                  accept_word = '<M-f>',
+              }
           },
           filetypes = {
               markdown = true,
               help = true,
           },
       })
-
-      vim.keymap.set('i', '<C-e>', require('copilot.suggestion').accept_line, {})
   end,
 }
