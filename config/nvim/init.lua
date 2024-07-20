@@ -82,4 +82,24 @@ vim.api.nvim_create_autocmd(
     }
 )
 
+vim.api.nvim_create_autocmd(
+    {'VimEnter', 'WinEnter', 'BufWinEnter'},
+    {
+        group = cursorline_group,
+        pattern = '*',
+        command = 'setlocal cursorline',
+        desc = 'Add cursorline'
+    }
+)
+
+vim.api.nvim_create_autocmd(
+    'WinLeave',
+    {
+        group = cursorline_group,
+        pattern = '*',
+        command = 'setlocal nocursorline',
+        desc = 'Remove cursorline'
+    }
+)
+
 require('manu.lazy')
