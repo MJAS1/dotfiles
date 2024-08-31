@@ -41,6 +41,7 @@ vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>yy', '"+yy')
 vim.keymap.set('n', '<leader>p', '"+p')
 vim.keymap.set('n', '<leader>P', '"+P')
+vim.keymap.set('n', '<leader><leader>', 'za')
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
