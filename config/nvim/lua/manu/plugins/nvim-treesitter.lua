@@ -24,7 +24,8 @@ return {
             'python',
             'rust',
             'lua',
-            'vim'
+            'vim',
+            'vimdoc',
         },
         incremental_selection = {
           enable = true,
