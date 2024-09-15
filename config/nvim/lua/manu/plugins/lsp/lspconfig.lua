@@ -79,11 +79,6 @@ return {
       lspconfig['ccls'].setup({
           capabilities = capabilities,
           on_attach = on_attach,
-          init_options = {
-              cache = {
-                  directory = '/tmp/ccls-cache',
-              },
-          },
       })
 
   end,
