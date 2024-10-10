@@ -124,7 +124,7 @@ vim.diagnostic.config({
 })
 
 -- Toggle diagnostics
-vim.keymap.set('n', '<leader>td', function()
+vim.keymap.set('n', '<leader>tt', function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
     end,
     {
