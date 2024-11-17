@@ -75,6 +75,9 @@ install_default_packages()
     else
         echo "Could not determine package manager. Packages not installed" >&2
     fi
+
+    # Install tmux plugin manager
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
 install_fonts()
