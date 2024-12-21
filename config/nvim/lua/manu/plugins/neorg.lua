@@ -7,10 +7,26 @@ return {
     {
         "nvim-neorg/neorg",
         dependencies = { "luarocks.nvim" },
-        -- put any other flags you wanted to pass to lazy here!
         config = function()
             require("neorg").setup({
-                notes = '~/notes',
+                load = {
+                    ["core.defaults"] = {},
+                    ["core.concealer"] = {},
+                    ["core.dirman"] = {
+                        config = {
+                            workspaces = {
+                                notes = '~/.notes',
+                            },
+                            default_workspace = 'notes',
+                        }
+                    },
+                }
+            })
+            vim.api.nvim_create_autocmd("Filetype", {
+                pattern = "norg",
+                callback = function()
+                    vim.keymap.set("n", "<CR>", "<Plug>(neorg.esupports.hop.hop-link)", { buffer = true })
+                end,
             })
         end,
     },
