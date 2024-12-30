@@ -52,6 +52,11 @@ vim.api.nvim_command("autocmd TermOpen * setlocal norelativenumber")
 vim.keymap.set('n', 'j', '(v:count > 1 ? "m\'" . v:count : "") . "j"', { expr=true })
 vim.keymap.set('n', 'k', '(v:count > 1 ? "m\'" . v:count : "") . "k"', { expr=true })
 
+vim.keymap.set('n', '<leader>q', ':bp<bar>sp<bar>bn<bar>bd<CR>', {
+  noremap = true,
+  silent = true,
+  desc = "Close current buffer without closing the window",
+})
 
 vim.opt.termguicolors = true
 
