@@ -11,5 +11,11 @@ return {
         map('n', '<C-g><C-w>', ':Gwrite<CR>', opts)
         map('n', '<C-g><C-d>', ':Gdiffsplit!<CR>', opts)
         map('n', '<C-g><C-g>', ':Git graph<CR>', opts)
+
+        vim.api.nvim_create_user_command(
+            "Gpo",
+            "Git push origin",
+            { desc = "Push to origin using Git Fugitive" }
+        )
     end,
 }
