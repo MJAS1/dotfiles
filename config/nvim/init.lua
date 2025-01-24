@@ -138,4 +138,4 @@ vim.keymap.set('n', '<leader>tt', function()
     }
 )
 
-require('manu.lazy')
+require('config.lazy')
