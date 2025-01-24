@@ -6,6 +6,7 @@ return {
       { "nvim-lua/plenary.nvim", branch = "master" },
     },
     build = "make tiktoken",
+    opts = {},
     vim.keymap.set('', '<leader>l', '<cmd>CopilotChatOpen<CR>', { remap = true })
   },
 }
