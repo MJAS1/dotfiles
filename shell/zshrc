@@ -5,8 +5,8 @@ stty -ixon
 if [ -f ~/.zsh/antigen.zsh ]; then
     source ~/.zsh/antigen.zsh
 
-    # Only autostart tmux if not running in ssh
-    if [ -z "$SSH_CLIENT" ] && command -v tmux &>/dev/null; then
+    # Only autostart tmux if not running in ssh or in vscode
+    if [ -z "$SSH_CLIENT" ] && [ "$TERM_PROGRAM" != "vscode" ] && command -v tmux &>/dev/null; then
         ZSH_TMUX_AUTOSTART=true
         antigen bundle tmux
     fi
