@@ -20,6 +20,7 @@ return {
           filetypes = {
               markdown = true,
               help = true,
+              norg = true,
           },
       })
   end,
