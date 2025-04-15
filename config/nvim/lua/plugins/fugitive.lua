@@ -4,7 +4,7 @@ return {
         local map = vim.api.nvim_set_keymap
         local opts = { noremap = true, silent = true }
 
-        map('n', '<C-g><C-s>', ':Git<CR>', opts)
+        map('n', '<C-g><C-s>', ':Git<CR><C-w>20+', opts)
         map('n', '<C-g><C-p>', ':Git add --patch %<CR>', opts)
         map('n', '<C-g><C-o>', ':Git commit -v<CR>', opts)
         map('n', '<C-g><C-l>', ':Git blame<CR>', opts)
