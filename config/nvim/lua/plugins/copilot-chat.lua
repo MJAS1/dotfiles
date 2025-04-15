@@ -14,6 +14,6 @@ return {
             }
         }
     },
-    vim.keymap.set('n', '<leader>l', '<cmd>CopilotChatOpen<CR>', { remap = true })
+    vim.keymap.set('n', '<leader>c', '<cmd>CopilotChatOpen<CR>', { noremap = true })
   },
  }
