@@ -21,6 +21,7 @@ return {
               markdown = true,
               help = true,
               norg = true,
+              gitcommit = true,
           },
       })
   end,
