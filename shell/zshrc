@@ -40,10 +40,28 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# Functions
+if [ -f ~/.functions ]; then
+    source ~/.functions
+fi
+
 # Local settings
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
+
+# Jump up one directory level with Ctrl+Alt-U
+up_one() {
+  if up 1; then
+      local precmd
+      for precmd in $precmd_functions; do
+          $precmd
+      done
+      zle reset-prompt
+  fi
+}
+zle -N up_one
+bindkey '\e\C-u' up_one
 
 HISTFILE=~/.zsh_histfile
 HISTSIZE=5000

@@ -12,6 +12,7 @@ readonly DOTFILES=(
     shell/zshrc
     shell/aliases
     shell/env
+    shell/functions
     git/gitconfig
     git/gitignore_global
     tmux/tmux.conf
