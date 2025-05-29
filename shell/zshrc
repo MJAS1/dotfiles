@@ -74,8 +74,33 @@ pop_d() {
   reset_prompt
 }
 zle -N pop_d
-
 bindkey '^O' pop_d
+
+# Go backward in dir stack
+dir_stack_back() {
+  pushd -1 > /dev/null || return
+  reset_prompt
+}
+zle -N dir_stack_back
+bindkey '^[i' dir_stack_back  # Alt-i
+
+# Go forward in dir stack
+dir_stack_forward() {
+  pushd +1 > /dev/null || return
+  reset_prompt
+}
+zle -N dir_stack_forward
+bindkey '^[o' dir_stack_forward  # Alt-o
+
+cdf() {
+    local dir
+    dir=$(dirs -v | fzf --height=40% --layout=reverse --border | awk '{print $2}')
+    dir=${dir/#\~/$HOME}  # Expand tilde to home directory
+    cd "$dir"
+    reset_prompt
+}
+zle -N cdf
+bindkey '^g' cdf
 
 
 HISTFILE=~/.zsh_histfile
