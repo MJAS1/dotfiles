@@ -58,6 +58,13 @@ vim.keymap.set('n', '<leader>q', ':bp<bar>sp<bar>bn<bar>bd<CR>', {
   desc = "Close current buffer without closing the window",
 })
 
+vim.filetype.add({
+  extension = {
+    tpp = "cpp",
+  },
+})
+
+
 vim.opt.termguicolors = true
 
 if vim.fn.executable('rg') == 1 then
