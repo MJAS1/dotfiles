@@ -50,14 +50,19 @@ if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
 
+reset_prompt() {
+    local precmd
+    for precmd in $precmd_functions; do
+        $precmd
+    done
+    zle reset-prompt
+}
+
 # Jump up one directory level with Ctrl+Alt-U
 up_one() {
   if up 1; then
       local precmd
-      for precmd in $precmd_functions; do
-          $precmd
-      done
-      zle reset-prompt
+      reset_prompt
   fi
 }
 zle -N up_one
