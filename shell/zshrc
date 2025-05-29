@@ -68,11 +68,21 @@ up_one() {
 zle -N up_one
 bindkey '\e\C-u' up_one
 
+# Pop directory stack with Ctrl-O
+pop_d() {
+  popd > /dev/null || return
+  reset_prompt
+}
+zle -N pop_d
+
+bindkey '^O' pop_d
+
+
 HISTFILE=~/.zsh_histfile
 HISTSIZE=5000
 SAVEHIST=10000
 
-setopt autocd extendedglob nomatch notify histignorespace
+setopt autocd autopushd extendedglob nomatch notify histignorespace
 bindkey -e
 
 # The following lines were added by compinstall
