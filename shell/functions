@@ -1,0 +1,18 @@
+# up: Go up N directory levels
+up() {
+    local levels=${1:-1}
+    if [[ ! $levels =~ ^[0-9]+$ ]]; then
+        echo "Usage: up <number-of-directories>" >&2
+        return 1
+    fi
+
+    local path=""
+    for ((i = 0; i < levels; i++)); do
+        path="${path}../"
+    done
+
+    builtin cd "$path" || {
+        echo "up: could not cd into '$path'" >&2
+        return 1
+    }
+}
