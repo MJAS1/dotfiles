@@ -68,11 +68,11 @@ install_bin_files()
 install_default_packages()
 {
     if command -v apt-get >/dev/null 2>&1; then
-        sudo apt-get install zsh powerline tmux fzf vim kitty picom rofi ruby neovim
+        sudo apt-get install zsh powerline tmux fzf vim kitty picom rofi ruby neovim ripgrep
     elif command -v dnf >/dev/null 2>&1; then
-        sudo dnf install zsh tmux-powerline tmux fzf vim kitty picom rofi ruby neovim
+        sudo dnf install zsh tmux-powerline tmux fzf vim kitty picom rofi ruby neovim ripgrep
     elif command -v pacman >/dev/null 2>&1; then
-        sudo pacman -S zsh powerline tmux fzf vim kitty picom rofi ruby neovim
+        sudo pacman -S zsh powerline tmux fzf vim kitty picom rofi ruby neovim ripgrep
     else
         echo "Could not determine package manager. Packages not installed" >&2
     fi
