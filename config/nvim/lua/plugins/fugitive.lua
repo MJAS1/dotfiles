@@ -13,9 +13,19 @@ return {
         map('n', '<C-g><C-g>', ':Git graph<CR>', opts)
 
         vim.api.nvim_create_user_command(
-            "Gpo",
-            "Git push origin",
-            { desc = "Push to origin using Git Fugitive" }
+            'Gpo',
+            'Git push origin',
+            { desc = 'Push to origin using Git Fugitive' }
+        )
+        vim.api.nvim_create_user_command(
+            'Gc',
+            'Git commit -v',
+            { desc = 'Commit using Git Fugitive' }
+        )
+        vim.api.nvim_create_user_command(
+            'Gca',
+            'Git commit --amend -v',
+            { desc = 'Amend commit using Git Fugitive' }
         )
     end,
 }
