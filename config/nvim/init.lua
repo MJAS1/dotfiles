@@ -74,6 +74,7 @@ end
 
 local wr_group = vim.api.nvim_create_augroup('WinResize', { clear = true })
 local qf_group = vim.api.nvim_create_augroup('Quickfixlist', { clear = true })
+local hl_group = vim.api.nvim_create_augroup('HighlightTrailingWhitespace', {clear = true})
 
 vim.api.nvim_create_autocmd(
     'VimResized',
@@ -112,6 +113,18 @@ vim.api.nvim_create_autocmd(
         pattern = '*',
         command = 'setlocal nocursorline',
         desc = 'Remove cursorline'
+    }
+)
+
+vim.api.nvim_create_autocmd(
+    {'ColorScheme', 'BufEnter', 'BufWinEnter'},
+    {
+        group = hl_group,
+        callback = function()
+            vim.api.nvim_set_hl(0, 'ExtraWhitespace', { bg = '#ea6962' })
+            vim.fn.matchadd('ExtraWhitespace', [[\s\+$]])
+        end,
+        desc = 'Highlight trailing whitespace in red'
     }
 )
 
