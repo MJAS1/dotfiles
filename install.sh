@@ -68,7 +68,8 @@ install_bin_files()
 install_default_packages()
 {
     if command -v apt-get >/dev/null 2>&1; then
-        sudo apt-get install zsh powerline tmux fzf vim kitty picom rofi ruby neovim ripgrep
+        sudo apt update
+        sudo apt install zsh powerline tmux fzf vim kitty picom rofi ruby neovim ripgrep
     elif command -v dnf >/dev/null 2>&1; then
         sudo dnf install zsh tmux-powerline tmux fzf vim kitty picom rofi ruby neovim ripgrep
     elif command -v pacman >/dev/null 2>&1; then
