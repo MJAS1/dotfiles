@@ -13,6 +13,7 @@ readonly DOTFILES=(
     shell/aliases
     shell/env
     shell/functions
+    shell/screenrc
     git/gitconfig
     git/gitignore_global
     tmux/tmux.conf
