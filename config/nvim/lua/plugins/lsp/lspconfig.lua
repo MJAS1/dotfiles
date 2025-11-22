@@ -57,12 +57,21 @@ return {
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    vim.lsp.config('*', {
+    vim.lsp.config('ccls', {
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
-    -- replace each server setup below
+    vim.lsp.config('pyright', {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    vim.lsp.config('bashls', {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     vim.lsp.enable('pyright')
     vim.lsp.enable('bashls')
     vim.lsp.enable('ccls')
