@@ -14,6 +14,7 @@ return {
         vim.keymap.set('', '<C-f>', '<cmd>Telescope live_grep<CR>')
         vim.keymap.set('', '<C-b><C-b>', '<cmd>Telescope buffers<CR>')
         vim.keymap.set('', '<C-b><C-f>', '<cmd>Telescope current_buffer_fuzzy_find<CR>')
+        vim.keymap.set('', '<C-g><C-b>', '<cmd>Telescope git_branches<CR>')
     end
 }
 
