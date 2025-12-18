@@ -18,6 +18,11 @@ return {
             { desc = 'Push to origin using Git Fugitive' }
         )
         vim.api.nvim_create_user_command(
+            'Gpof',
+            'Git push origin --force',
+            { desc = 'Force push to origin using Git Fugitive' }
+        )
+        vim.api.nvim_create_user_command(
             'Gc',
             'Git commit -v',
             { desc = 'Commit using Git Fugitive' }
